@@ -1,5 +1,7 @@
 # Thịnh Vượng Legal
 
+Website công khai: https://thinh-vuong-legal.vercel.app
+
 Website mô phỏng dịch vụ pháp lý hỗ trợ thành lập và vận hành doanh nghiệp cung ứng ví điện tử tại Việt Nam, xây dựng cho môn Thực hành nghề luật.
 
 ## Chạy tại máy
