@@ -130,12 +130,17 @@ export async function POST(request: Request) {
         { error: 'Đã vượt giới hạn tạm thời. Vui lòng thử lại sau.' },
         { status: 429 },
       );
-    const apiKey = process.env.OPENAI_API_KEY;
+    const directKey = process.env.OPENAI_API_KEY;
+    const gatewayKey =
+      process.env.AI_GATEWAY_API_KEY ||
+      process.env.VERCEL_OIDC_TOKEN ||
+      request.headers.get('x-vercel-oidc-token');
+    const apiKey = directKey || gatewayKey;
     if (!apiKey)
       return Response.json(
         {
           error:
-            'Trợ lý AI chưa được kích hoạt. Chủ dự án cần cấu hình OPENAI_API_KEY trên máy chủ.',
+            'Trợ lý AI chưa được kích hoạt trên môi trường máy chủ hiện tại.',
         },
         { status: 503 },
       );
@@ -144,22 +149,27 @@ export async function POST(request: Request) {
 
 ${knowledge}
 ${selectedText ? `Đoạn đang xem:\n---\n${selectedText}\n---\n` : ''}Câu hỏi: ${message}`;
-    const upstream = await fetch('https://api.openai.com/v1/responses', {
-      method: 'POST',
-      headers: {
-        authorization: `Bearer ${apiKey}`,
-        'content-type': 'application/json',
+    const upstream = await fetch(
+      directKey
+        ? 'https://api.openai.com/v1/responses'
+        : 'https://ai-gateway.vercel.sh/v1/responses',
+      {
+        method: 'POST',
+        headers: {
+          authorization: `Bearer ${apiKey}`,
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify({
+          model: directKey ? 'gpt-5.5' : 'openai/gpt-5.5',
+          input: prompt,
+          reasoning: { effort: 'low' },
+          text: { verbosity: 'low' },
+          max_output_tokens: 700,
+          stream: true,
+          store: false,
+        }),
       },
-      body: JSON.stringify({
-        model: 'gpt-5.5',
-        input: prompt,
-        reasoning: { effort: 'low' },
-        text: { verbosity: 'low' },
-        max_output_tokens: 700,
-        stream: true,
-        store: false,
-      }),
-    });
+    );
     if (!upstream.ok || !upstream.body) {
       console.error(
         'OpenAI error',
