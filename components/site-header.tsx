@@ -4,7 +4,7 @@ import { Mail, Menu, MessageCircle, Scale } from 'lucide-react';
 const nav = [
   ['Dịch vụ', '/dich-vu'],
   ['Hợp đồng', '/hop-dong'],
-  ['Tạo hợp đồng', '/tao-hop-dong'],
+  ['Nền tảng AI', '/cong-cu'],
   ['Kiến thức', '/kien-thuc'],
   ['Đội ngũ', '/doi-ngu'],
 ] as const;

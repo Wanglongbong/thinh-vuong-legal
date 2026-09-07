@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { contracts } from '@/lib/site-data';
 import { contractReportContent } from '@/lib/contract-report-content';
+import { downloadLegalDocx } from '@/lib/download-docx';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -63,13 +64,6 @@ function cleanFileName(value: string) {
     .replace(/[^a-zA-Z0-9]+/g, '-')
     .replace(/^-|-$/g, '')
     .toLowerCase();
-}
-
-function escapeHtml(value: string) {
-  return value
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
 }
 
 export function ContractBuilder({
@@ -204,17 +198,11 @@ LƯU Ý: Đây là bản dự thảo hỗ trợ học tập, được tạo tự
     window.setTimeout(() => setCopied(false), 1800);
   }
 
-  function downloadWord() {
-    const html = `<!doctype html><html><head><meta charset="utf-8"><style>body{font-family:'Times New Roman',serif;font-size:13pt;line-height:1.5;margin:2cm 2cm 2cm 3cm}pre{white-space:pre-wrap;font:inherit}</style></head><body><pre>${escapeHtml(draft)}</pre></body></html>`;
-    const blob = new Blob(['\ufeff', html], {
-      type: 'application/msword;charset=utf-8',
-    });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `du-thao-${cleanFileName(selected.shortTitle)}.doc`;
-    link.click();
-    URL.revokeObjectURL(url);
+  async function downloadWord() {
+    await downloadLegalDocx(
+      `du-thao-${cleanFileName(selected.shortTitle)}`,
+      draft,
+    );
   }
 
   return (

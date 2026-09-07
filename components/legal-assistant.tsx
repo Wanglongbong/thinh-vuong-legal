@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { useEffect, useRef, useState, type SyntheticEvent } from 'react';
+import { useEffect, useRef, useState, type SyntheticEvent } from "react";
 import {
   Bot,
   CornerDownLeft,
   LoaderCircle,
   Send,
   Sparkles,
-} from 'lucide-react';
+} from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -15,15 +15,16 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@/components/ui/sheet';
+} from "@/components/ui/sheet";
+import { useCustomerName } from "@/hooks/use-customer-name";
 
-type Message = { role: 'user' | 'assistant'; text: string };
-const dailyKey = 'tv-legal-ai-usage';
+type Message = { role: "user" | "assistant"; text: string };
+const dailyKey = "tv-legal-ai-usage";
 const today = () => new Date().toISOString().slice(0, 10);
 function readUsage() {
-  if (typeof window === 'undefined') return 0;
+  if (typeof window === "undefined") return 0;
   try {
-    const saved = JSON.parse(localStorage.getItem(dailyKey) ?? '{}');
+    const saved = JSON.parse(localStorage.getItem(dailyKey) ?? "{}");
     return saved.date === today() ? Number(saved.count) || 0 : 0;
   } catch {
     return 0;
@@ -34,9 +35,11 @@ function saveUsage(count: number) {
 }
 
 export function LegalAssistant() {
+  const { name: customerName, ready, remember, forget } = useCustomerName();
   const [open, setOpen] = useState(false);
-  const [input, setInput] = useState('');
-  const [selectedText, setSelectedText] = useState('');
+  const [nameInput, setNameInput] = useState("");
+  const [input, setInput] = useState("");
+  const [selectedText, setSelectedText] = useState("");
   const [messages, setMessages] = useState<Message[]>([]);
   const [pending, setPending] = useState(false);
   const [usage, setUsage] = useState(readUsage);
@@ -46,71 +49,72 @@ export function LegalAssistant() {
     const ask = (event: Event) => {
       setSelectedText((event as CustomEvent<string>).detail);
       setInput(
-        'Hãy giải thích ý nghĩa pháp lý của đoạn được chọn đối với hoạt động ví điện tử.',
+        "Hãy giải thích ý nghĩa pháp lý của đoạn được chọn bằng văn phong luật học dễ hiểu.",
       );
       setOpen(true);
       setTimeout(() => inputRef.current?.focus(), 150);
     };
-    window.addEventListener('tv:ask-selection', ask);
-    return () => window.removeEventListener('tv:ask-selection', ask);
+    window.addEventListener("tv:ask-selection", ask);
+    return () => window.removeEventListener("tv:ask-selection", ask);
   }, []);
 
   async function submit(event: SyntheticEvent<HTMLFormElement>) {
     event.preventDefault();
     const message = input.trim();
-    if (!message || pending || usage >= 5) return;
-    setMessages((old) => [...old, { role: 'user', text: message }]);
-    setInput('');
+    if (!customerName || !message || pending || usage >= 5) return;
+    setMessages((old) => [...old, { role: "user", text: message }]);
+    setInput("");
     setPending(true);
     const next = usage + 1;
     setUsage(next);
     saveUsage(next);
     try {
-      const response = await fetch('/api/legal-assistant', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
+      const response = await fetch("/api/legal-assistant", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
         body: JSON.stringify({
           message,
           selectedText: selectedText || undefined,
+          customerName,
         }),
       });
       if (!response.ok || !response.body) {
         const payload: unknown = await response.json().catch(() => ({}));
         const errorMessage =
-          typeof payload === 'object' &&
+          typeof payload === "object" &&
           payload &&
-          'error' in payload &&
-          typeof payload.error === 'string'
+          "error" in payload &&
+          typeof payload.error === "string"
             ? payload.error
-            : 'Trợ lý chưa thể trả lời lúc này.';
+            : "Trợ lý chưa thể trả lời lúc này.";
         throw new Error(errorMessage);
       }
-      setSelectedText('');
-      setMessages((old) => [...old, { role: 'assistant', text: '' }]);
+      setSelectedText("");
+      setMessages((old) => [...old, { role: "assistant", text: "" }]);
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
-      let buffer = '';
-      let answer = '';
+      let buffer = "";
+      let answer = "";
       while (true) {
         const { done, value } = await reader.read();
         if (done) break;
         buffer += decoder.decode(value, { stream: true });
-        const blocks = buffer.split('\n\n');
-        buffer = blocks.pop() ?? '';
+        const blocks = buffer.split("\n\n");
+        buffer = blocks.pop() ?? "";
         for (const block of blocks) {
           const dataLine = block
-            .split('\n')
-            .find((line) => line.startsWith('data: '));
-          if (!dataLine || dataLine === 'data: [DONE]') continue;
+            .split("\n")
+            .find((line) => line.startsWith("data: "));
+          if (!dataLine || dataLine === "data: [DONE]") continue;
           try {
             const eventData: unknown = JSON.parse(dataLine.slice(6));
             if (
-              typeof eventData === 'object' &&
+              typeof eventData === "object" &&
               eventData &&
-              'type' in eventData &&
-              eventData.type === 'response.output_text.delta' &&
-              'delta' in eventData &&
-              typeof eventData.delta === 'string'
+              "type" in eventData &&
+              eventData.type === "response.output_text.delta" &&
+              "delta" in eventData &&
+              typeof eventData.delta === "string"
             ) {
               answer += eventData.delta;
               const currentAnswer = answer;
@@ -127,16 +131,16 @@ export function LegalAssistant() {
           }
         }
       }
-      if (!answer) throw new Error('Không nhận được nội dung trả lời.');
+      if (!answer) throw new Error("Không nhận được nội dung trả lời.");
     } catch (error) {
       console.error(error);
       setMessages((old) => {
         const last = old.at(-1);
         const fallback: Message = {
-          role: 'assistant',
-          text: 'Trợ lý chưa thể phản hồi lúc này. Vui lòng kiểm tra cấu hình hoặc thử lại sau.',
+          role: "assistant",
+          text: "Trợ lý chưa thể phản hồi lúc này. Vui lòng kiểm tra cấu hình hoặc thử lại sau.",
         };
-        return last?.role === 'assistant' && !last.text
+        return last?.role === "assistant" && !last.text
           ? [...old.slice(0, -1), fallback]
           : [...old, fallback];
       });
@@ -158,9 +162,9 @@ export function LegalAssistant() {
               <Bot />
             </span>
             <div>
-              <SheetTitle>Trợ lý pháp lý ví điện tử</SheetTitle>
+              <SheetTitle>Trợ lý pháp luật Việt Nam</SheetTitle>
               <SheetDescription>
-                Giải thích nhanh từ nguồn đã chọn lọc
+                Văn phong luật học, trình bày dễ hiểu
               </SheetDescription>
             </div>
           </div>
@@ -168,69 +172,101 @@ export function LegalAssistant() {
         <div className="ai-notice">
           Phục vụ học tập, không phải ý kiến tư vấn cho vụ việc cụ thể.
         </div>
-        <div className="ai-messages" aria-live="polite">
-          {!messages.length && (
-            <div className="ai-welcome">
-              <Sparkles />
-              <h2>Bạn muốn làm rõ điều gì?</h2>
-              <p>
-                Trợ lý chỉ dùng dữ liệu đã chọn lọc về ví điện tử và 20 dịch vụ
-                pháp lý trong báo cáo.
-              </p>
-              {[
-                'Hợp đồng API ví điện tử cần điều khoản nào?',
-                'Tại sao ví điện tử phải có tài khoản bảo đảm?',
-                'Phân biệt dịch vụ tối thiểu và nâng cao của ví điện tử',
-              ].map((s) => (
-                <button key={s} onClick={() => setInput(s)}>
-                  {s}
-                  <CornerDownLeft />
-                </button>
+        {ready && !customerName ? (
+          <form
+            className="ai-name-gate"
+            onSubmit={(event) => {
+              event.preventDefault();
+              remember(nameInput);
+            }}
+          >
+            <span className="demo-avatar">TV</span>
+            <h2>Chúng tôi nên gọi bạn là gì?</h2>
+            <p>
+              Tên gọi chỉ được lưu trên trình duyệt này để trợ lý nhớ bạn ở lần
+              truy cập sau.
+            </p>
+            <input
+              value={nameInput}
+              onChange={(event) => setNameInput(event.target.value)}
+              maxLength={60}
+              placeholder="Nhập tên của bạn"
+              aria-label="Tên khách hàng"
+            />
+            <button disabled={!nameInput.trim()}>Ghi nhớ tên</button>
+          </form>
+        ) : (
+          <>
+            <div className="ai-messages" aria-live="polite">
+              {!messages.length && (
+                <div className="ai-welcome">
+                  <Sparkles />
+                  <h2>Chào {customerName}, bạn muốn làm rõ điều gì?</h2>
+                  <p>
+                    Trợ lý có thể giải thích các lĩnh vực pháp luật Việt Nam;
+                    nội dung về ví điện tử có kho dữ liệu chuyên sâu hơn.
+                  </p>
+                  {[
+                    "Hợp đồng API ví điện tử cần điều khoản nào?",
+                    "Hợp đồng dân sự vô hiệu khi nào?",
+                    "Người lao động nghỉ việc cần báo trước bao lâu?",
+                  ].map((s) => (
+                    <button key={s} onClick={() => setInput(s)}>
+                      {s}
+                      <CornerDownLeft />
+                    </button>
+                  ))}
+                </div>
+              )}
+              {messages.map((m, i) => (
+                <div key={i} className={`ai-message ${m.role}`}>
+                  {m.text || <LoaderCircle className="spin" />}
+                </div>
               ))}
             </div>
-          )}
-          {messages.map((m, i) => (
-            <div key={i} className={`ai-message ${m.role}`}>
-              {m.text || <LoaderCircle className="spin" />}
-            </div>
-          ))}
-        </div>
-        <form className="ai-form" onSubmit={submit}>
-          {selectedText && (
-            <div className="selected-context">
-              <strong>Đoạn đang hỏi</strong>
-              <span>
-                {selectedText.slice(0, 260)}
-                {selectedText.length > 260 ? '…' : ''}
-              </span>
-              <button type="button" onClick={() => setSelectedText('')}>
-                Bỏ đoạn chọn
-              </button>
-            </div>
-          )}
-          <textarea
-            ref={inputRef}
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            maxLength={1500}
-            placeholder={
-              usage >= 5
-                ? 'Bạn đã dùng hết 5 lượt hôm nay'
-                : 'Nhập câu hỏi về pháp luật ví điện tử…'
-            }
-            disabled={usage >= 5 || pending}
-          />
-          <div className="ai-form-row">
-            <span>{usage}/5 lượt hôm nay</span>
-            <button
-              type="submit"
-              disabled={!input.trim() || pending || usage >= 5}
-              aria-label="Gửi câu hỏi"
-            >
-              {pending ? <LoaderCircle className="spin" /> : <Send />}
-            </button>
-          </div>
-        </form>
+            <form className="ai-form" onSubmit={submit}>
+              {selectedText && (
+                <div className="selected-context">
+                  <strong>Đoạn đang hỏi</strong>
+                  <span>
+                    {selectedText.slice(0, 260)}
+                    {selectedText.length > 260 ? "…" : ""}
+                  </span>
+                  <button type="button" onClick={() => setSelectedText("")}>
+                    Bỏ đoạn chọn
+                  </button>
+                </div>
+              )}
+              <textarea
+                ref={inputRef}
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                maxLength={1500}
+                placeholder={
+                  usage >= 5
+                    ? "Bạn đã dùng hết 5 lượt hôm nay"
+                    : "Nhập câu hỏi pháp luật của bạn…"
+                }
+                disabled={usage >= 5 || pending}
+              />
+              <div className="ai-form-row">
+                <span>
+                  {usage}/5 lượt hôm nay ·{" "}
+                  <button type="button" className="name-reset" onClick={forget}>
+                    Đổi tên
+                  </button>
+                </span>
+                <button
+                  type="submit"
+                  disabled={!input.trim() || pending || usage >= 5}
+                  aria-label="Gửi câu hỏi"
+                >
+                  {pending ? <LoaderCircle className="spin" /> : <Send />}
+                </button>
+              </div>
+            </form>
+          </>
+        )}
       </SheetContent>
     </Sheet>
   );

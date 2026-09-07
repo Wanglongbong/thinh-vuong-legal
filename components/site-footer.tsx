@@ -22,6 +22,7 @@ export function SiteFooter() {
           <h2>Khám phá</h2>
           <Link href="/dich-vu">Sáu nhóm dịch vụ</Link>
           <Link href="/hop-dong">Thư viện hợp đồng</Link>
+          <Link href="/cong-cu">Nền tảng pháp lý AI</Link>
           <Link href="/tao-hop-dong">Tạo dự thảo hợp đồng</Link>
           <Link href="/kien-thuc">Cơ sở pháp lý</Link>
           <Link href="/doi-ngu">Đội ngũ dự án</Link>
