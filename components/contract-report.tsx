@@ -11,8 +11,8 @@ export function ContractReport({
       <span className="article-kicker">06 · Nội dung từ báo cáo tổng hợp</span>
       <h2>Phạm vi tư vấn chi tiết</h2>
       <p className="report-intro">
-        Nội dung dưới đây được trích riêng từ Chương 4 của bản báo cáo tổng hợp
-        và sắp xếp lại để nhà đầu tư tra cứu theo từng dịch vụ hợp đồng.
+        Nội dung dưới đây được trích từ đúng đề mục tương ứng trong bản báo cáo
+        tổng hợp và sắp xếp lại để nhà đầu tư tra cứu theo từng dịch vụ.
       </p>
       <div className="report-accordions">
         {content.sections.map((section, index) => (

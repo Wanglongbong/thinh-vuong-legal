@@ -55,7 +55,7 @@ export default function Home() {
               <span>hợp đồng và bộ hồ sơ</span>
             </div>
             <div>
-              <strong>09</strong>
+              <strong>20</strong>
               <span>mẫu tạo dự thảo trực tuyến</span>
             </div>
           </div>

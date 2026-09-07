@@ -10,7 +10,7 @@ export default function ContractsPage() {
       <SectionHero
         eyebrow="Thư viện pháp lý"
         title="Hợp đồng đúng với từng mắt xích của ví điện tử"
-        description="Tra cứu theo mức độ cần thiết hoặc giai đoạn hoạt động. Chín dịch vụ hợp đồng đã có nội dung chi tiết được trích từ báo cáo tổng hợp."
+        description="Tra cứu theo mức độ cần thiết hoặc giai đoạn hoạt động. Cả 20 hợp đồng, chính sách và bộ hồ sơ đều có nội dung chi tiết được trích từ báo cáo tổng hợp."
       >
         <div className="hero-stat">
           <strong>20</strong>
@@ -26,8 +26,8 @@ export default function ContractsPage() {
             <div>
               <strong>Tạo dự thảo theo thông tin nhà đầu tư</strong>
               <p>
-                Chọn một trong chín hợp đồng ví điện tử, nhập thông tin các bên
-                và tải bản Word để tiếp tục rà soát.
+                Chọn một trong 20 mẫu pháp lý, nhập thông tin các bên và tải bản
+                Word để tiếp tục rà soát.
               </p>
             </div>
             <Link className="gold-button dark" href="/tao-hop-dong">

@@ -174,8 +174,8 @@ export function LegalAssistant() {
               <Sparkles />
               <h2>Bạn muốn làm rõ điều gì?</h2>
               <p>
-                Trợ lý chỉ dùng dữ liệu đã chọn lọc về ví điện tử và chín dịch
-                vụ hợp đồng trong báo cáo.
+                Trợ lý chỉ dùng dữ liệu đã chọn lọc về ví điện tử và 20 dịch vụ
+                pháp lý trong báo cáo.
               </p>
               {[
                 'Hợp đồng API ví điện tử cần điều khoản nào?',

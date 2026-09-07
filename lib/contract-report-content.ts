@@ -4,8 +4,299 @@ export type ContractReportContent = {
   sections: ReportContentSection[];
 };
 
-// Trích riêng Chương 4 từ bản báo cáo tổng hợp; không đưa danh sách thành viên/MSV lên website.
+// Trích riêng nội dung dịch vụ từ Chương 2 đến Chương 6; không đưa danh sách thành viên/MSV lên website.
 export const contractReportContent: Record<string, ContractReportContent> = {
+  'dieu-le-cong-ty-co-phan': {
+    sourceHeading: '2.2. Điều lệ công ty (*).',
+    sections: [
+      {
+        heading: '2.2.1. Giới thiệu dịch vụ.',
+        paragraphs: [
+          'Điều lệ công ty là văn bản pháp lý nội bộ quan trọng, quy định cơ cấu tổ chức, quản trị, quyền và nghĩa vụ của cổ đông, người quản lý và cơ chế vận hành của công ty cổ phần. Đối với doanh nghiệp cung ứng dịch vụ ví điện tử, Điều lệ không chỉ cần phù hợp với Luật Doanh nghiệp mà còn phải phản ánh đặc thù về cơ cấu sở hữu, huy động vốn, quản trị doanh nghiệp, quản lý tài chính và tuân thủ pháp luật chuyên ngành về trung gian thanh toán.',
+          'Theo đó, cung cấp dịch vụ tư vấn xây dựng Điều lệ cho Công ty, trên cơ sở cơ cấu 05 cổ đông sáng lập, định hướng tiếp nhận nhà đầu tư mới và hoạt động cung ứng dịch vụ ví điện tử; đồng thời thiết lập các quy định nội bộ nhằm phân định rõ thẩm quyền, trách nhiệm của các cơ quan quản lý, bảo đảm tính minh bạch trong quản trị và hạn chế các rủi ro pháp lý trong quá trình hoạt động.',
+        ],
+      },
+      {
+        heading: '2.2.2. Nội dung dịch vụ.',
+        paragraphs: [
+          'Gồm 7 chương:',
+          '- Chương 1. Tư vấn xây dựng các quy định về hình thức, tên gọi, trụ sở, ngành nghề kinh doanh, vốn điều lệ, cơ cấu và phương thức huy động vốn, tăng giảm vốn điều lệ; cổ đông sáng lập, các loại cổ phần, cổ phiếu, sổ đăng ký cổ đông, quyền và nghĩa vụ của cổ đông; cổ phần ưu đãi biểu quyết, cổ phần ưu đãi cổ tức, cổ phần phổ thông của cổ đông sáng lập, thanh toán cổ phần đã đăng ký mua; chào bán, chuyển nhượng, mua lại cổ phần, chào bán và chuyển nhượng trái phiếu riêng lẻ, điều kiện thanh toán và xử lý cổ phần được mua lại, trả cổ tức và thu hồi tiền thanh toán cổ phần mua lại hoặc cổ tức.',
+          '- Chương 2. Cơ cấu tổ chức và quản lý công ty tư vấn xây dựng quy định về cơ cấu tổ chức, người đại diện theo pháp luật, con dấu và nghĩa vụ của người quản lý; thẩm quyền, tổ chức và hoạt động của Đại hội đồng cổ đông, Hội đồng quản trị, Tổng Giám đốc/Giám đốc và Ban kiểm soát; quy định về triệu tập, tiến hành họp, biểu quyết, thông qua nghị quyết, tiêu chuẩn, nhiệm kỳ, quyền và nghĩa vụ của các chức danh quản lý và cơ quan kiểm soát.',
+          '- Chương 3. Chủ sở hữu hưởng lợi của công ty sẽ tư vấn quy định về xác định chủ sở hữu hưởng lợi, kê khai thông tin và thông tin làm căn cứ xác định chủ sở hữu hưởng lợi; cập nhật khi có thay đổi và lưu giữ thông tin về chủ sở hữu hưởng lợi của Công ty.',
+          '- Chương 4. Căn cứ, phương pháp xác định thù lao, tiền lương và thưởng cho người quản lý và thành viên ban kiểm soát hoặc kiểm soát viên tư vấn thù lao, tiền lương và lợi ích khác của thành viên Hội đồng quản trị, Tổng Giám đốc; công khai các lợi ích liên quan; thù lao và lợi ích khác của thành viên Ban kiểm soát.',
+          '- Chương 5. Tài chính tư vấn thể lệ quyết toán, trả cổ tức và lập quỹ, nguyên tắc phân chia lợi nhuận sau thuế, xử lý lỗ trong kinh doanh.',
+          '- Chương 6. Hoạt động cung ứng dịch vụ ví điện tử và tuân thủ pháp luật chuyên ngành tư vấn xây dựng các quy định về nguyên tắc cung ứng dịch vụ ví điện tử, quản trị rủi ro, an toàn hệ thống và bảo mật thông tin, bảo vệ khách hàng, phòng chống gian lận, phòng chống rửa tiền, đồng thời quy định các vấn đề liên quan đến đề án cung ứng dịch vụ và giải pháp kỹ thuật.',
+          '- Chương 7. Điều khoản cuối cùng tư vấn quy định về các trường hợp và điều kiện giải thể doanh nghiệp, trình tự thủ tục giải thể, thanh lý tài sản, phá sản doanh nghiệp, giải quyết tranh chấp và các điều khoản về hiệu lực, sửa đổi, bổ sung Điều lệ.',
+          'Về các dịch vụ cung cấp trong quá trình:',
+          '- Tư vấn xây dựng các quy định chung về tên, trụ sở, ngành nghề, vốn điều lệ, cổ đông sáng lập và các loại cổ phần.',
+          '- Tư vấn xây dựng cơ cấu tổ chức, quản trị và thẩm quyền của Đại hội đồng cổ đông, Hội đồng quản trị, Tổng Giám đốc/Giám đốc và Ban kiểm soát/Ủy ban kiểm toán.',
+          '- Tư vấn quy định về chủ sở hữu hưởng lợi, thù lao, tiền lương, lợi ích của người quản lý và cơ chế kiểm soát xung đột lợi ích.',
+          '- Tư vấn các quy định về tài chính, phân phối lợi nhuận, trả cổ tức, quản lý tài sản và nguồn vốn của Công ty.',
+          '- Tư vấn xây dựng các quy định đặc thù về cung ứng dịch vụ ví điện tử, quản trị rủi ro, an toàn hệ thống, bảo mật thông tin, bảo vệ khách hàng và phòng, chống gian lận, rửa tiền.',
+          '- Tư vấn các quy định về giải thể, phá sản, thanh lý tài sản, giải quyết tranh chấp, sửa đổi và bổ sung Điều lệ.',
+          '- Soạn thảo, rà soát và hoàn thiện Điều lệ bảo đảm thống nhất với hồ sơ đăng ký doanh nghiệp, cơ cấu 05 cổ đông sáng lập và định hướng hoạt động của Công ty.',
+        ],
+      },
+      {
+        heading: '2.2.3. Phạm vi dịch vụ.',
+        paragraphs: [
+          'Phạm vi tư vấn bao gồm việc xây dựng, rà soát và hoàn thiện Điều lệ công ty cổ phần phù hợp với cơ cấu năm cổ đông sáng lập, định hướng huy động vốn và hoạt động cung ứng dịch vụ ví điện tử; không bao gồm thủ tục xin giấy phép trung gian thanh toán hoặc thẩm định kỹ thuật chuyên sâu nếu không có thỏa thuận riêng.',
+        ],
+      },
+      {
+        heading: '2.2.4. Mục đích dịch vụ.',
+        paragraphs: [
+          'Việc tư vấn nhằm xây dựng Điều lệ phù hợp với mô hình Công ty cổ phần cung ứng dịch vụ ví điện tử, bảo đảm tuân thủ Luật Doanh nghiệp và pháp luật chuyên ngành; đồng thời phân định rõ quyền, nghĩa vụ và thẩm quyền của cổ đông, cơ quan quản lý, người điều hành, thiết lập cơ chế quản trị, tài chính và kiểm soát rủi ro, qua đó hạn chế tranh chấp và rủi ro pháp lý trong quá trình hoạt động của Công ty.',
+        ],
+      },
+    ],
+  },
+  'to-chuc-dai-hoi-dong-co-dong': {
+    sourceHeading: '3.1. Tư vấn tổ chức và tiến hành Đại hội đồng cổ đông.',
+    sections: [
+      {
+        heading: '3.1.1. Giới thiệu dịch vụ.',
+        paragraphs: [
+          'Đại hội đồng cổ đông là cơ quan có thẩm quyền quyết định các vấn đề quan trọng của công ty cổ phần. Đối với doanh nghiệp cung ứng dịch vụ ví điện tử, việc tổ chức Đại hội đồng cổ đông cần bảo đảm đúng quy định của Luật Doanh nghiệp và phù hợp với các quy định pháp luật chuyên ngành. Do đó, việc tư vấn tổ chức Đại hội nhằm bảo đảm đúng thẩm quyền, trình tự, điều kiện tiến hành và hiệu lực của các nghị quyết được thông qua.',
+        ],
+      },
+      {
+        heading: '3.1.2. Nội dung dịch vụ.',
+        paragraphs: [
+          '- Xác định chủ thể có thẩm quyền triệu tập Đại hội đồng cổ đông và rà soát điều kiện triệu tập theo quy định của Luật Doanh nghiệp.',
+          '- Rà soát cơ cấu 05 cổ đông sáng lập, xác định quyền tham dự, biểu quyết và tỷ lệ sở hữu của từng cổ đông.',
+          '- Xây dựng chương trình họp, xác định các nội dung thuộc thẩm quyền quyết định của Đại hội đồng cổ đông, đặc biệt đối với vốn điều lệ, cơ cấu cổ phần, Điều lệ, nhân sự quản lý và định hướng hoạt động Fintech.',
+          '- Tư vấn trình tự, thời hạn và hình thức gửi thông báo mời họp; rà soát tài liệu phục vụ Đại hội đồng cổ đông theo quy định pháp luật.',
+          '- Tư vấn điều kiện tiến hành Đại hội, cách thức biểu quyết, tỷ lệ thông qua nghị quyết và xử lý các trường hợp cổ đông vắng mặt, ủy quyền hoặc không đồng ý với nội dung được đưa ra biểu quyết.',
+          '- Rà soát các nội dung liên quan đến hoạt động cung ứng dịch vụ ví điện tử, bảo đảm nghị quyết của Đại hội đồng cổ đông phù hợp với quy định pháp luật chuyên ngành và không vượt quá thẩm quyền của Đại hội.',
+          '- Soạn thảo Biên bản họp, Nghị quyết Đại hội đồng cổ đông và các tài liệu liên quan; rà soát tính thống nhất giữa diễn biến cuộc họp, kết quả biểu quyết và nội dung nghị quyết.',
+        ],
+      },
+      {
+        heading: '3.1.3. Phạm vi dịch vụ.',
+        paragraphs: [
+          'Thứ nhất, về đối tượng áp dụng. Dịch vụ áp dụng đối với công ty cổ phần, cổ đông, người đại diện theo ủy quyền, thành viên Hội đồng quản trị, Ban kiểm soát/Ủy ban kiểm toán và các cá nhân có liên quan đến việc triệu tập, tổ chức, tiến hành Đại hội đồng cổ đông, đặc biệt đối với doanh nghiệp hoạt động trong lĩnh vực Fintech, cung ứng dịch vụ ví điện tử.',
+          'Thứ hai, về thời điểm và thời hạn áp dụng. Dịch vụ được thực hiện trước, trong và sau Đại hội đồng cổ đông. Trước Đại hội, tư vấn, chuẩn bị hồ sơ, tài liệu và thực hiện thủ tục triệu tập theo đúng thời hạn luật định; trong Đại hội, hỗ trợ kiểm tra tư cách cổ đông, điều kiện tiến hành, biểu quyết và thông qua nghị quyết; sau Đại hội, hoàn thiện Biên bản họp, Nghị quyết và các hồ sơ liên quan theo quy định pháp luật.',
+          'Thứ ba, về thời hạn thực hiện. Thời hạn cung cấp dịch vụ được xác định theo kế hoạch tổ chức Đại hội và phải bảo đảm tuân thủ các thời hạn luật định về triệu tập, lập danh sách cổ đông, gửi thông báo mời họp và tiến hành Đại hội theo Điều 139, Điều 140, Điều 141, Điều 143 và Điều 145 Luật Doanh nghiệp 2020.',
+          'Thứ tư, về phạm vi không bao gồm. Dịch vụ không bao gồm giải quyết tranh chấp, khiếu kiện giữa các cổ đông; thủ tục thay đổi đăng ký doanh nghiệp sau Đại hội; thủ tục xin giấy phép, chấp thuận chuyên ngành về ví điện tử; các chi phí nhà nước, công chứng, chứng thực và các chi phí phát sinh khác',
+        ],
+      },
+      {
+        heading: '3.1.4. Mục đích dịch vụ.',
+        paragraphs: [
+          'Việc tư vấn nhằm bảo đảm Đại hội đồng cổ đông được triệu tập và tiến hành đúng thẩm quyền, trình tự, thủ tục; các nghị quyết được thông qua đúng tỷ lệ và không vượt quá thẩm quyền của Đại hội, qua đó hạn chế nguy cơ nghị quyết bị yêu cầu hủy bỏ, tranh chấp giữa các cổ đông và rủi ro pháp lý trong quá trình doanh nghiệp triển khai hoạt động cung ứng dịch vụ ví điện tử.',
+        ],
+      },
+    ],
+  },
+  'hop-dong-lao-dong-fintech': {
+    sourceHeading: '3.2. Hợp đồng lao động (*).',
+    sections: [
+      {
+        heading: '3.2.1. Giới thiệu dịch vụ.',
+        paragraphs: [
+          'Cũng giống như các doanh nghiệp kinh doanh trong các lĩnh vực khác, hợp đồng lao động là nền tảng để các bên có thể hợp tác và thực hiện các giao dịch một cách rõ ràng và là cơ sở để hình thành quan hệ lao động cá nhân. Hợp đồng lao động trong doanh nghiệp hoạt động trong lĩnh vực Fintech cung cấp dịch vụ ví điện tử có vị trí đặc biệt hơn hợp đồng lao động trong nhiều doanh nghiệp thông thường, không phải vì nó trở thành một loại hợp đồng hoàn toàn khác về bản chất, mà vì đối tượng công việc, mức độ rủi ro, yêu cầu về nhân sự và trách nhiệm tuân thủ của người lao động cao hơn đáng kể. Theo đó, tại khoản 2 Điều 13 Bộ luật Lao động 2019 quy định như sau: “Trước khi nhận người lao động vào làm việc thì người sử dụng lao động phải giao kết hợp đồng lao động với người lao động.” có thể thấy rằng việc giao kết hợp đồng lao động giữa người sử dụng lao động và người lao động là hoạt động pháp lý bắt buộc đối với tất cả doanh nghiệp và không có ngoại lệ. Điều này đặc biệt quan trọng với doanh nghiệp, do đặc thù hoạt động dựa nhiều vào nhân sự công nghệ, dữ liệu, tài chính, pháp chế, vận hành hệ thống,… doanh nghiệp thường có nhiều nhóm nhân sự và cộng tác viên. Việc phân định rõ hợp đồng lao động - hợp đồng dịch vụ - hợp đồng hợp tác ngay từ đầu giúp hạn chế rủi ro doanh nghiệp sử dụng một hợp đồng có tên gọi khác nhưng thực chất lại là quan hệ lao động gây hiểu lầm và phát sinh tranh chấp với người lao động.',
+        ],
+      },
+      {
+        heading: '3.2.2. Nội dung dịch vụ.',
+        paragraphs: [
+          'Về trình tự, thủ tục cần tuân thủ khi soạn thảo hợp đồng lao động mà nhóm các nhà đầu tư cần chuẩn bị như sau:',
+          'Bước 1: Chuẩn bị thông tin cần thiết của doanh nghiệp',
+          'Bước 2: Soạn thảo hợp đồng lao động',
+          'Bước 3: Kiểm tra, rà soát nội dung hợp đồng',
+          'Bước 4: Ký kết hợp đồng',
+          'Xây dựng mẫu hợp đồng lao động xác định thời hạn hoặc hợp đồng lao động không xác định thời hạn tùy thuộc vào thỏa thuận của nhóm nhà đầu tư đối với người lao động. Đồng thời thiết kế về điều khoản hợp đồng lao động phù hợp đối với từng vị trí đảm nhận của nhân sự (giao dịch viên, chuyên viên lập trình, chuyên viên vận hành hệ thống,…) cũng như từng bộ phận trong doanh nghiệp (bộ phận chăm sóc khách hàng, bộ phận công nghệ và phát triển sản phẩm, bộ phận phân tích dữ liệu,…). Đặc biệt là những điều khoản về bí mật kinh doanh, bí mật công nghệ, thông tin khách hàng, thông tin đối tác ngân hàng, thông tin về hệ thống bảo mật nội bộ.',
+          'Ngoài ra, hỗ trợ doanh nghiệp trong việc xác định căn cứ chấm dứt hợp đồng lao động đối với nhân sự: về thời hạn báo trước để tránh doanh nghiệp rơi vào trạng thái bị động gây gián đoạn hệ thống nếu chẳng hạn như vị trí đó đòi hỏi nhân sự phải có trình độ chuyên môn cao không phải dễ dàng có thể tuyển được, về nghĩa vụ thanh toán (tiền lương, trợ cấp,…) chưa được thanh toán để tránh phát sinh tranh chấp sau khi chấm dứt hợp đồng lao động, về nghĩa vụ bàn giao tài sản và thu hồi quyền truy cập hệ thống để tránh nguy cơ sử dụng và truy cập trái phép khi đã chấm dứt hợp đồng lao động.',
+          'Căn cứ vào khoản 3 Điều 18 Bộ luật Lao động 2019 để xác định thẩm quyền ký hợp đồng lao động của doanh nghiệp.',
+        ],
+      },
+      {
+        heading: '3.2.3. Phạm vi dịch vụ.',
+        paragraphs: [
+          'Nội dung của hợp đồng ngoài những điều khoản cụ thể về quyền và nghĩa vụ của mỗi bên thì phải có những thông tin tối thiểu được quy định tại khoản 1 Điều 21 Bộ luật Lao động 2019.',
+          'Hơn nữa, do doanh nghiệp hoạt động trong lĩnh vực Fintech cung ứng dịch vụ ví điện tử có liên quan trực tiếp đến bí mật công nghệ như mã nguồn, API, cơ chế xác thực, kiến trúc hệ thống ví,…nên cần phải có thêm thỏa thuận bằng văn bản với người lao động về nội dung, thời hạn bảo vệ bí mật kinh doanh, bảo vệ bí mật công nghệ, quyền lợi và việc bồi thường trong trường hợp vi phạm theo quy định tại khoản 2 Điều 21 Bộ luật Lao động 2019 để kiểm soát rủi ro xuất phát từ việc người lao động tiếp cận mã nguồn, dữ liệu khách hàng, thông tin giao dịch, thuật toán, kiến trúc hệ thống, cơ chế bảo mật, chiến lược kinh doanh và các thông tin mật khác của doanh nghiệp tiết lộ hoặc sử dụng trái phép thông tin sau khi chấm dứt quan hệ lao động. Thỏa thuận về bảo vệ bí mật kinh doanh, bí mật công nghệ có thể gồm những nội dung chủ yếu được quy định cụ thể tại Điều 4 Thông tư 10/2020/TT/BLĐTBXH.',
+        ],
+      },
+      {
+        heading: '3.2.4. Mục đích dịch vụ.',
+        paragraphs: [
+          'Đối với mô hình ví điện tử, có thể thấy rằng hợp đồng lao động không chỉ là công cụ xác lập quan hệ lao động mà còn là một hành lang pháp lý bảo vệ hệ thống thanh toán, thông tin giao dịch, dữ liệu khách hàng và tài sản của doanh nghiệp, giải quyết rủi ro phát sinh, tranh chấp lao động xuất phát từ bên trong doanh nghiệp. Cụ thể:',
+          'Thứ nhất, hợp đồng lao động là cơ sở phân định quyền và nghĩa vụ cũng như trách nhiệm của nhân sự trong từng bộ phận đối với những vị trí có khả năng tác động trực tiếp đến hệ thống ví điện tử, chẳng hạn như một nhân viên kỹ thuật có quyền truy cập hệ thống có thể không trực tiếp giữ tiền của khách hàng nhưng lại có khả năng tác động đến hệ thống xử lý giao dịch. Do đó, hợp đồng lao động cần xác định rõ những hệ thống người lao động được phép truy cập cũng như những dữ liệu được phép sử dụng và khi vi phạm quy trình bảo mật thì phải chịu trách nhiệm như thế nào. Ví dụ: Nhân viên phát triển phần mềm có trách nhiệm gì đối với mã nguồn? Nhân viên vận hành hệ thống có được truy cập dữ liệu khách hàng không? Nhân viên có được sao chép dữ liệu ra thiết bị cá nhân không?',
+          'Thứ hai, hợp đồng lao động là công cụ bảo vệ dữ liệu khách hàng. Bởi ví điện tử gắn với một lượng lớn dữ liệu liên quan đến thông tin cá nhân của khách hàng như: họ tên, ngày tháng năm sinh, số điện thoại, thông tin tài khoản, lịch sử giao dịch, căn cước công dân,…nhân sự có thể lợi dụng quyền truy cập lấy thông tin khách hàng để sử dụng ngoài mục đích công việc. Do đó, điều khoản về bảo mật thông tin dữ liệu khách hàng trong hợp đồng lao động có giá trị quản trị rủi ro rất lớn.',
+          'Thứ ba, hợp đồng lao động giúp doanh nghiệp bảo vệ tài sản trí tuệ và bí mật kinh doanh cũng như tài sản doanh nghiệp. Người lao động trong doanh nghiệp như đội ngũ lập trình, công nghệ và an ninh thông tin, có thể trực tiếp tham gia xây dựng, vận hành và kiểm soát hệ thống xử lý giao dịch tài chính, đồng thời tiếp cận mã nguồn, dữ liệu khách hàng, hệ thống bảo mật và các bí mật công nghệ của doanh nghiệp. Hơn nữa, công nghệ của Fintech có tính liên kết và phức tạp cao doanh nghiệp mất rất nhiều tiền và chất xám để xây dựng hệ thống ví điện tử, nếu như không có điều khoản về điều này mà nhân viên lập trình nội bộ sao chép, tiết lộ hoặc sử dụng cho doanh nghiệp khác, doanh nghiệp có thể phải đối mặt với nguy cơ mất lợi thế cạnh tranh và phát sinh tranh chấp về quyền sở hữu trí tuệ, bí mật kinh doanh có thể gây nên thiệt hại rất lớn cho nhóm các nhà đầu tư.',
+        ],
+      },
+    ],
+  },
+  'thoa-thuan-bao-mat': {
+    sourceHeading: '3.3. Hợp đồng bảo mật thông tin (*).',
+    sections: [
+      {
+        heading: '3.3.1. Giới thiệu dịch vụ.',
+        paragraphs: [
+          'Dịch vụ tư vấn nhằm hỗ trợ Công ty xây dựng hệ thống hồ sơ bảo mật phù hợp với hoạt động fintech. Nội dung tập trung vào việc xác định, phân loại và bảo vệ các thông tin quan trọng như dữ liệu khách hàng, thông tin giao dịch, bí mật kinh doanh, mã nguồn và tài liệu công nghệ; xây dựng quy chế bảo mật, NDA, cơ chế phân quyền và quy trình xử lý sự cố. Qua đó, Công ty có cơ sở pháp lý để kiểm soát việc tiếp cận và sử dụng thông tin, bảo vệ tài sản và dữ liệu, hạn chế rủi ro rò rỉ thông tin và các tranh chấp pháp lý trong quá trình hoạt động.',
+        ],
+      },
+      {
+        heading: '3.3.2. Nội dung dịch vụ.',
+        paragraphs: [
+          'Thứ nhất, xác định đối tượng cần bảo mật: (1) Thông tin khách hàng, (2) Dữ liệu giao dịch, (3) Thông tin tài chính, (4) Bí mật kinh doanh, (5) Cơ sở dữ liệu, (6) Thông tin về sản phẩm dịch vụ, (7) Chiến lược kinh doanh, (8) Hợp đồng và thông tin của đối tác, (9) Tài liệu, (10) Quy trình nội bộ.',
+          'Thứ hai, xác định chủ thể có quyền tiếp cận thông tin. Doanh nghiệp cần xây dựng cơ chế phân quyền theo chức năng, vị trí và nhu cầu công việc.',
+          'Thứ ba, xác định nghĩa vụ bảo mật. Doanh nghiệp cần quy định rõ nghĩa vụ của người lao động và các bên có liên quan trong công việc: không được tiết lộ thông tin, không sử dụng thông tin ngoài mục đích được phép, không sao chép hoặc chuyển giao trái quyền và bảo quản thông tin trong thời gian làm việc.',
+          'Thứ tư, xác định trách nhiệm khi vi phạm. Hồ sơ cần quy định biện pháp xử lý khi có hành vi làm mất, tiết lộ hoặc sử dụng trái phép thông tin, bao gồm trách nhiệm theo hợp đồng, trách nhiệm bồi thường và các trách nhiệm pháp lý khác nếu có.',
+          'Thứ năm, bảo đảm tuân thủ pháp luật về dữ liệu cá nhân. Đây là vấn đề đặc biệt quan trọng vì doanh nghiệp có thể xử lý dữ liệu của khách hàng, người lao động và đối tác. Hồ sơ bảo mật cần phải được thiết kế đồng bộ với các quy định của pháp luật hiện hành về bảo vệ dữ liệu cá nhân.',
+        ],
+      },
+      {
+        heading: '3.3.3. Phạm vi dịch vụ.',
+        paragraphs: [
+          'Hồ sơ bảo mật được sử dụng đối với Công ty ví điện tử và cá nhân, tổ chức có liên quan đến việc tiếp cận, quản lý, sử dụng và xử lý các thông tin của công ty,trong đó bao gồm người lao động, nhân viên, cộng tác viên, đối tác, nhà cung cấp dịch vụ và bên thứ ba được quyền tiếp cận đến thông tin. Đối tượng bảo mật gồm dữ liệu của khách hàng, các thông tin giao dịch, thông tin tài khoản, bí mật kinh doanh, mã nguồn, thuật toán, tài liệu kỹ thuật, thông tin nội bộ và các thông tin liên quan khác được công ty xác định là thông tin mật.',
+          'Các quy định liên quan đến bảo mật được áp dụng bắt đầu từ thời điểm cá nhân, tổ chức được tiếp cận hoặc xử lý thông tin mật của công ty và trong khoảng thời gian có quan hệ lao động, hợp tác hoặc cung cấp dịch vụ. Còn đối với các thông tin có tính chất bí mật, nghĩa vụ bảo mật vẫn có thể tiếp tục được duy trì sau khi quan hệ lao động chấm dứt hoặc hợp tác trong thời hạn do các bên thỏa thuận hoặc cho đến khi thông tin đã không còn đáp ứng điều kiện để được bảo vệ theo quy định pháp luật.',
+          'Việc mà thu thập, sử dụng, lưu trữ, cung cấp và xử lý thông tin thì phải tuân thủ theo quy định pháp luật về bảo vệ dữ liệu cá nhân, an toàn thông tin và bí mật kinh doanh. Còn đối với dữ liệu cá nhân của khách hàng, việc xử lý này phải phù hợp với Luật Bảo vệ dữ liệu cá nhân 2025 và Nghị định 356/2025/NĐ-CP. Với bí mật kinh doanh, thông tin phải đáp ứng đủ điều kiện bảo hộ theo Điều 84 Luật Sở hữu trí tuệ. Công ty không được phép thỏa thuận hoặc áp dụng những biện pháp bảo mật nhằm hạn chế những quyền mà pháp luật có quy định bắt buộc phải bảo đảm cho khách hàng, người lao động hoặc cơ quan nhà nước có thẩm quyền.',
+          'Dịch vụ tư vấn hồ sơ bảo mật sẽ không bao gồm những việc trực tiếp triển khai các giải pháp kỹ thuật về an ninh mạng như xây dựng hệ thống bảo mật, kiểm thử xâm nhập, giám sát an ninh mạng và khắc phục sự cố kỹ thuật hoặc điều tra số, trừ khi trường hợp có thỏa thuận riêng. Dịch vụ cũng không bao gồm những việc đại diện Công ty giải quyết tranh chấp hay khiếu nại hoặc tố tụng liên quan đến các hành vi vi phạm bảo mật nếu các nội dung này không có quy định riêng trong hợp đồng dịch vụ.',
+        ],
+      },
+      {
+        heading: '3.3.4. Mục đích dịch vụ.',
+        paragraphs: [
+          'Thứ nhất,bảo vệ tài sản và lợi ích của doanh nghiệp. Hồ sơ bảo mật giúp doanh nghiệp bảo vệ các thông tin có giá trị như là dữ liệu của khách hàng, bí mật trong kinh doanh, công nghệ, chiến lược kinh doanh và thông tin tài chính.',
+          'Thứ hai, bảo vệ khách hàng và dữ liệu cá nhân. Việc bảo mật không chỉ bảo vệ lợi ích của doanh nghiệp mà còn bảo vệ quyền và lợi ích hợp pháp của khách hàng. Có cơ chế bảo mật tốt sẽ làm giảm nguy cơ mất dữ liệu , lộ thông tin khách hàng, truy cập một cách trái phép và nguy cơ sử dụng dữ liệu sai mục đích.',
+          'Thứ ba, tạo cơ sở pháp lý để xử vi phạm. Doanh nghiệp có cơ sở rõ ràng hơn để xác định hành vi vi phạm và áp dụng các biện pháp xử lý phù hợp.',
+          'Thứ tư, nâng cao khả năng chứng minh quyền đối với bí mật kinh doanh. Biện pháp này giúp củng cố vị thế pháp lý của doanh nghiệp khi có tranh chấp.',
+          'Thứ năm, giúp doanh nghiệp chuẩn hóa hoạt động quản trị nội bộ. Hồ sơ bảo mật tạo thành một quy trình thống nhất cho toàn doanh nghiệp thay vì mỗi phòng ban tự xử lý thông tin theo cách riêng.',
+        ],
+      },
+    ],
+  },
+  'thoa-thuan-so-huu-tri-tue': {
+    sourceHeading: '3.4. Thỏa thuận sở hữu trí tuệ.',
+    sections: [
+      {
+        heading: '3.4.1. Giới thiệu dịch vụ.',
+        paragraphs: [
+          'Dịch vụ tư vấn nhằm hỗ trợ cho công ty ví điện tử xây dựng văn bản thỏa thuận sở hữu trí tuệ nhằm để xác lập rõ quyền sở hữu, quyền sử dụng cùng với trách nhiệm của các bên đối với các tài sản trí tuệ được phát sinh trong quá trình hoạt động. Nội dung tư vấn tập trung vào việc xác định và bảo vệ các tài sản như phần mềm, mã nguồn, ứng dụng ví điện tử, giao diện, thuật toán, cơ sở dữ liệu, thương hiệu, logo, tài liệu công nghệ và bí mật kinh doanh. Qua đó, giúp công ty có cơ sở pháp lý vững chắc để quản lý và khai thác hiệu quả tài sản trí tuệ, hạn chế được các nguy cơ tranh chấp xảy ra về quyền sở hữu, quyền sử dụng và hành vi xâm phạm quyền sở hữu trí tuệ trong quá trình hoạt động kinh doanh.',
+        ],
+      },
+      {
+        heading: '3.4.2. Nội dung dịch vụ.',
+        paragraphs: [
+          'Thứ nhất, xác định các tài sản sở hữu trí tuệ thuộc phạm vi trong thỏa thuận. Việc tư vấn để xác định các tài sản sở hữu trí tuệ của Công ty về ví điện tử, trong đó bao gồm chương trình máy tính, mã nguồn, giao diện ứng dụng, cơ sở dữ liệu, thương hiệu, logo, tài liệu kỹ thuật, sáng chế hoặc giải pháp kỹ thuật và bí mật kinh doanh. Còn đối với phần mềm, chương trình máy tính sẽ được bảo hộ theo các quy định về quyền tác giả tại Điều 22 Luật Sở hữu trí tuệ và bí mật kinh doanh được bảo hộ theo quy định tại Điều 84 Luật Sở hữu trí tuệ.',
+          'Thứ hai, xác định được chủ sở hữu và các chủ thể có quyền đối với tài sản sở hữu trí tuệ. Việc tư vấn để xác định tác giả, chủ sở hữu quyền tác giả và quyền của công ty với các tài sản được tạo ra do nhân viên, do cộng tác viên hoặc do đối tác. Trong trường hợp công ty giao nhiệm vụ hoặc giao ký hợp đồng với tác giả để tạo ra sản phẩm, quyền sở hữu sẽ được xác định theo quy định tại Điều 39 Luật Sở hữu trí tuệ, trừ những trường hợp mà các bên có thỏa thuận khác. Trường hợp quyền tác giả được chuyển giao thì áp dụng theo Điều 41 Luật Sở hữu trí tuệ.',
+          'Thứ ba, tư vấn phân biệt các tài sản sở hữu trí tuệ có trước và tài sản được tạo ra trong quá trình hợp tác. Tư vấn giúp rà soát và đưa ra phân định rõ tài sản trí tuệ mà mỗi bên đã sở hữu trước thời điểm ký kết với tài sản được đã được tạo ra trong quá trình thực hiện hợp đồng. Còn đối với tài sản mà phát sinh trong quá trình hợp tác, thì thỏa thuận phải cần xác định được rõ chủ sở hữu, phạm vi quyền sử dụng, khai thác và chuyển giao nhằm hạn chế tranh chấp. Nội dung này đã được xây dựng trên cơ sở tại Điều 385 và Điều 398 Bộ luật Dân sự 2015 liên quan đến hợp đồng và những nội dung thỏa thuận của các bên.',
+          'Thứ tư, đưa ra tư vấn về những vấn đề quyền sở hữu và khai thác chương trình máy tính, mã nguồn và công nghệ. Tư vấn nhằm xác định được quyền đối với phần mềm, mã nguồn và các sản phẩm công nghệ được công ty hoặc nhân sự, đối tác tạo ra và cũng đồng thời quy định các quyền sửa chữa, nâng cấp, sao chép, sử dụng và khai thác phần mềm. Căn cứ theo Điều 22 của Luật Sở hữu trí tuệ và những quy định được hướng dẫn tại Nghị định 17/2023/NĐ-CP về quyền tác giả, quyền liên quan.',
+          'Thứ năm, tư vấn về cách thức chuyển giao và sử dụng quyền sở hữu trí tuệ.Tư vấn nhằm xây dựng các điều khoản về chuyển nhượng, chuyển giao quyền sử dụng và khai thác tài sản sở hữu trí tuệ. Còn đối với quyền sở hữu công nghiệp thì việc chuyển nhượng sẽ phải được thực hiện thông qua hợp đồng bằng văn bản quy định tại Điều 138 Luật Sở hữu trí tuệ và nội dung hợp đồng về chuyển nhượng được quy định trong Điều 140 Luật Sở hữu trí tuệ.',
+          'Thứ sáu, đưa ra tư vấn về quyền và nghĩa vụ đối với bí mật kinh doanh, bí mật công nghệ. Đối với nhân viên trực tiếp trong việc tiếp cận đến mã nguồn, thuật toán, dữ liệu kỹ thuật hoặc các bí mật kinh doanh của Công ty, tư vấn đưa ra đề xuất xây dựng việc thỏa thuận về phạm vi, thời hạn, phương thức bảo vệ và trách nhiệm khi vi phạm. Căn cứ theo quy định tại khoản 2 Điều 21 Bộ luật Lao động 2019 và Điều 4 của Nghị định 145/2020/NĐ-CP.',
+          'Thứ bảy, xem xét rà soát việc sử dụng tài sản sở hữu trí tuệ của bên thứ ba. Đưa ra tư vấn kiểm tra về việc sử dụng phần mềm, thư viện mã nguồn mở, hình ảnh, nội dung, công nghệ hoặc các tài sản trí tuệ khác thuộc bên thứ ba, nhằm mục đích hạn chế nguy cơ xâm phạm đến quyền sở hữu trí tuệ và trách nhiệm pháp lý phát sinh.',
+        ],
+      },
+      {
+        heading: '3.4.3. Phạm vi dịch vụ.',
+        paragraphs: [
+          'Thỏa thuận sở hữu trí tuệ được áp dụng với Công ty ví điện tử và các cá nhân, tổ chức có sự liên quan đến trong quá trình tạo lập, sử dụng, hoạt động quản lý hoặc hoạt động khai thác tài sản sở hữu trí tuệ của Công ty, trong đó sẽ bao gồm người lao động, nhân viên về công nghệ, cộng tác viên, đối tác và bên cung cấp các dịch vụ. Đối tượng của thỏa thuận này bao gồm phần mềm, mã nguồn, ứng dụng ví điện tử, giao diện, thuật toán, nhãn hiệu, logo, tài liệu kỹ thuật, bí mật trong kinh doanh và các tài sản trí tuệ khác liên quan đến quyền của Công ty.',
+          'Thỏa thuận sở hữu trí tuệ được áp dụng bắt đầu kể từ thời điểm các bên thực hiện việc ký kết hoặc kể từ thời điểm được quy định cụ thể trong hợp đồng. Đối với các tài sản trí tuệ được tạo ra trong quá trình làm việc hoặc hợp tác, các điều khoản đến quyền sở hữu và khai thác được sẽ được áp dụng trong suốt thời gian phát sinh quyền đối với các tài sản đó. Trong trường hợp chấm dứt quan hệ lao động hoặc hợp tác, các nghĩa vụ liên quan về chuyển giao quyền, không được sử dụng trái phép và bảo vệ bí mật kinh doanh tiếp tục được thực hiện theo như thời hạn được thỏa thuận và theo quy định pháp luật.',
+          'Việc xác lập quyền sở hữu hoặc chuyển giao quyền sở hữu trí tuệ quy định nằm trong phạm vi quyền mà pháp luật cho phép. Theo đó các bên không được thỏa thuận gây ảnh hưởng đến các quyền về nhân thân không thể chuyển giao của tác giả hoặc quyền của chủ thể khác. Còn đối với chương trình về máy tính, mã nguồn và các sản phẩm công nghệ, quyền của các bên sẽ được xác định theo quy định về quyền tác giả, theo đó chương trình máy tính thuộc đối tượng được bảo hộ quyền tác giả quy định tại Điều 22 Luật Sở hữu trí tuệ. Việc bí mật kinh doanh, việc bảo hộ phải đáp ứng điều kiện theo Điều 84 Luật Sở hữu trí tuệ. Ngoài ra, đối với người lao động tiếp cận đến bí mật kinh doanh, bí mật công nghệ, thỏa thuận đưa ra phải phù hợp với khoản 2 Điều 21 Bộ luật Lao động 2019.',
+        ],
+      },
+      {
+        heading: '3.4.4. Mục đích dịch vụ.',
+        paragraphs: [
+          'Thứ nhất, xác lập rõ quyền sở hữu. Làm doanh nghiệp biết được chính xác các tài sản trí tuệ nào thuộc quyền sở hữu của mình, tránh xảy ra tranh chấp với nhân viên hoặc đối tác.',
+          'Thứ hai, bảo vệ tài sản công nghệ. Đối với công ty hoạt động dịch vụ ví điện tử thì công nghệ sẽ thường là tài sản cốt lõi. Thỏa thuận được đưa vào nhằm kiểm soát việc sao chép mã nguồn, sử dụng thuật toán, chuyển giao công nghệ, khai thác phần mềm và việc sử dụng dữ liệu và tài liệu kỹ thuật.',
+          'Thứ ba, hạn chế các tranh chấp có thể xảy ra khi nhân viên nghỉ việc. Vì vậy khi mà doanh nghiệp đã xây dựng được một cơ chế thỏa thuận sở hữu trí tuệ rõ ràng, minh bạch ngay từ đầu thì sẽ là một cơ sở pháp lý vững chắc, chính xác đề xác định quyền các bên trước và sau khi xảy ra tranh chấp.',
+          'Thứ tư, tạo ra cơ sở để thực hiện thương mại hóa tài sản trí tuệ. Khi mà các quyền sở hữu tài sản đã được quy định rõ ràng, thì công ty có thể thực hiện vào các hoạt động thương mại hóa liên quan đến tài sản trí tuệ được quyền sở hữu như là được cấp phép, chuyển nhượng, định giá, góp vốn, thương mại hóa và khai thác sản phẩm công nghệ',
+        ],
+      },
+    ],
+  },
+  'hop-dong-giam-doc': {
+    sourceHeading: '3.5. Hợp đồng với Giám đốc hoặc Tổng giám đốc.',
+    sections: [
+      {
+        heading: '3.5.1. Giới thiệu dịch vụ.',
+        paragraphs: [
+          'Hợp đồng với giám đốc, phó giám đốc là thỏa thuận giữa công ty và các nhân được tuyển dụng hoặc được bổ nhiệm và vị trí quản lý, theo đó cá nhân cam kết thực hiện công việc quản lý, điều hành trong phạm vi chức vụ được giao, còn công ty có nghĩa vụ trả lương, thưởng và các chế độ khác theo thỏa thuận.',
+        ],
+      },
+      {
+        heading: '3.5.2. Nội dung dịch vụ.',
+        paragraphs: [
+          'Về trình tự, thủ tục cần thực hiện khi xây dựng hợp đồng với Giám đốc, Phó Giám đốc mà nhóm các nhà đầu tư cần chuẩn bị như sau:',
+          'Thứ nhất, chuẩn bị thông tin cần thiết của doanh nghiệp và người quản lý. Xác định thông tin pháp lý của doanh nghiệp, cơ cấu tổ chức quản lý, chức danh,thời hạn đảm nhiệm chức vụ, quyền hạn dự kiến được giao, mức thù lao và các điều kiện làm việc của Giám đốc, Phó Giám đốc.',
+          'Thứ hai, xác định cơ chế pháp lý đối với Giám đốc, Phó Giám đốc. Rà soát Điều lệ công ty, loại hình doanh nghiệp, cơ cấu quản trị và quyết định của cơ quan có thẩm quyền để xác định người có thẩm quyền bổ nhiệm và ký hợp đồng với Giám đốc, Phó Giám đốc.',
+          'Đồng thời, cần phân biệt giữa chức danh quản lý trong doanh nghiệp và quan hệ lao động. Trường hợp Giám đốc, Phó Giám đốc đồng thời làm việc cho doanh nghiệp theo quan hệ lao động thì hợp đồng phải bảo đảm các nội dung của hợp đồng lao động theo Bộ luật Lao động 2019; trường hợp chỉ xác lập quan hệ thuê người quản lý thì cần thiết kế hợp đồng phù hợp với bản chất pháp lý của quan hệ này.',
+          'Thứ ba, soạn thảo hợp đồng. Xây dựng hợp đồng trên cơ sở vị trí của từng người quản lý. Đối với Giám đốc, hợp đồng tập trung vào quyền điều hành tổng thể, chiến lược kinh doanh, quản lý nhân sự, tài chính, công nghệ, hoạt động cung ứng dịch vụ ví điện tử và trách nhiệm trước doanh nghiệp.',
+          'Đối với Phó Giám đốc, hợp đồng cần xác định rõ phạm vi công việc được Giám đốc hoặc cơ quan có thẩm quyền giao, quyền đại diện trong phạm vi được ủy quyền, trách nhiệm quản lý bộ phận và giới hạn thẩm quyền để tránh tình trạng chồng chéo quyền hạn với Giám đốc.',
+          'Thứ tư, kiểm tra, rà soát và ký kết hợp đồng. Sau khi hoàn thiện dự thảo, rà soát sự thống nhất giữa hợp đồng với Điều lệ công ty, quyết định bổ nhiệm, quy chế quản trị nội bộ và các văn bản ủy quyền của doanh nghiệp trước khi tiến hành ký kết.',
+          'Đặc biệt, đối với doanh nghiệp kinh doanh trong lĩnh vực ví điện tử, hợp đồng cần được soạn thảo để tránh trường hợp Giám đốc hoặc Phó Giám đốc được trao quyền quá rộng nhưng không có cơ chế kiểm soát tương ứng, chẳng hạn như quyền truy cập hệ thống, quyền phê duyệt giao dịch, quyền sử dụng dữ liệu khách hàng, quyền ký kết hợp đồng với đối tác ngân hàng hoặc quyền quyết định các vấn đề liên quan đến hệ thống công nghệ.',
+        ],
+      },
+      {
+        heading: '3.5.3. Phạm vi dịch vụ.',
+        paragraphs: [
+          'Thứ nhất, đối tượng áp dụng: Hợp đồng được áp dụng đối với Giám đốc và Phó Giám đốc của công ty, là những người giữ chức vụ quản lý, điều hành và thực hiện các quyền, nghĩa vụ theo quy định của pháp luật, Điều lệ công ty và quyết định của cơ quan có thẩm quyền. Đối tượng áp dụng của hợp đồng bao gồm cá nhân được bổ nhiệm, thuê hoặc ký kết hợp đồng để thực hiện chức danh Giám đốc, Phó Giám đốc và các bên có liên quan đến việc thực hiện quyền, nghĩa vụ của các chức danh đảm nhiệm. hợp đồng cần xác định rõ quyền hạn trong việc tổ chức hoạt động hằng ngày, xây dựng và thực hiện kế hoạch kinh doanh, quản lý nhân sự, quản lý rủi ro, kiểm soát việc tuân thủ các điều kiện cung ứng dịch vụ ví điện tử và đại diện cho công ty trong phạm vi thẩm quyền',
+          'Thứ hai, thời điểm áp dụng hợp đồng: Hợp đồng nên quy định rõ thời điểm phát sinh quyền và nghĩa vụ của Giám đốc, Phó Giám đốc, có thể kể từ ngày hợp đồng có hiệu lực, ngày được bổ nhiệm hoặc một ngày cụ thể do các bên thỏa thuận.',
+          'Thời hạn hợp đồng có thể được xác định theo nhiệm kỳ giữ chức vụ, theo thời hạn thỏa thuận giữa công ty và người quản lý hoặc theo thời hạn khác được quy định trong Điều lệ công ty. Hợp đồng cần quy định cụ thể trường hợp bổ nhiệm lại, miễn nhiệm, từ chức, chấm dứt hợp đồng hoặc thay đổi chức danh.',
+          'Thứ ba, phạm vi không được áp dụng: Hợp đồng cần quy định rằng Giám đốc, Phó Giám đốc không được tự mình quyết định hoặc tổ chức cung ứng các dịch vụ nằm ngoài phạm vi hoạt động được pháp luật cho phép hoặc ngoài phạm vi Giấy phép cung ứng dịch vụ trung gian thanh toán của công ty. Đặc biệt, không được sử dụng hợp đồng để trao cho người quản lý quyền tự ý mở rộng sản phẩm ví điện tử, triển khai phương thức thanh toán mới hoặc cung ứng dịch vụ trung gian thanh toán khác khi chưa đáp ứng điều kiện pháp luật và chưa được cơ quan có thẩm quyền chấp thuận, nếu pháp luật yêu cầu.',
+        ],
+      },
+      {
+        heading: '3.5.4. Mục đích dịch vụ.',
+        paragraphs: [
+          'Thứ nhất, hợp đồng bảo vệ hệ thống công nghệ và dữ liệu khách hàng. Đặc thù của doanh nghiệp ví điện tử là người quản lý có thể tiếp cận các thông tin đặc biệt quan trọng như dữ liệu khách hàng, thông tin giao dịch, hệ thống xác thực, API, kiến trúc hệ thống, cơ chế bảo mật, thông tin về đối tác ngân hàng và chiến lược phát triển sản phẩm. Vì vậy, hợp đồng cần gắn nghĩa vụ bảo mật với cơ chế thu hồi quyền truy cập, bàn giao dữ liệu và tài sản, đồng thời xác định trách nhiệm khi có hành vi sử dụng hoặc tiết lộ trái phép.',
+          'Thứ hai, hợp đồng giúp bảo vệ lợi ích của doanh nghiệp và nhóm nhà đầu tư. Trong doanh nghiệp, một quyết định của Giám đốc hoặc Phó Giám đốc có thể ảnh hưởng đồng thời đến tài chính, công nghệ, khách hàng và khả năng duy trì hoạt động của hệ thống. Do đó, việc quy định rõ những quyết định nào người quản lý được tự mình thực hiện và những quyết định nào phải được cơ quan quản trị hoặc nhóm nhà đầu tư thông qua sẽ giúp hạn chế nguy cơ lạm quyền.',
+          'Thứ ba, hợp đồng tạo cơ sở xử lý khi Giám đốc, Phó Giám đốc chấm dứt nhiệm vụ. Việc thay đổi người quản lý trong doanh nghiệp cần được kiểm soát chặt chẽ hơn doanh nghiệp thông thường do người quản lý có thể đang nắm giữ nhiều quyền truy cập và thông tin quan trọng. Hợp đồng cần quy định rõ thời điểm chấm dứt, nghĩa vụ bàn giao, thu hồi tài sản, khóa tài khoản, thu hồi quyền truy cập hệ thống, bảo mật thông tin và giải quyết các nghĩa vụ tài chính còn tồn đọng.',
+          'Qua đó, hợp đồng với Giám đốc, Phó Giám đốc vừa là cơ sở xác lập quyền và nghĩa vụ của người quản lý, vừa là một công cụ để nhóm nhà đầu tư kiểm soát quyền lực quản lý, bảo vệ tài sản, dữ liệu khách hàng, công nghệ và hạn chế các tranh chấp có thể phát sinh trong quá trình vận hành doanh nghiệp ví điện tử.',
+        ],
+      },
+    ],
+  },
+  'thoa-thuan-co-dong': {
+    sourceHeading: '3.6. Thỏa thuận giữa các cổ đông.',
+    sections: [
+      {
+        heading: '3.6.1. Giới thiệu dịch vụ.',
+        paragraphs: [
+          'Dịch vụ tư vấn và soạn thảo Hợp đồng Thỏa thuận cổ đông là dịch vụ pháp lý nhằm thiết lập một khuôn khổ thỏa thuận thống nhất giữa các cổ đông của công ty về việc sở hữu, quản trị, điều hành, đầu tư, chuyển nhượng cổ phần và giải quyết các vấn đề phát sinh trong quá trình hoạt động của doanh nghiệp. Khác với Điều lệ công ty và các quy định bắt buộc của pháp luật doanh nghiệp, Thỏa thuận cổ đông tập trung điều chỉnh mối quan hệ giữa các cổ đông trên cơ sở thỏa thuận, qua đó xác định rõ quyền, nghĩa vụ, trách nhiệm và cơ chế phối hợp của từng cổ đông.',
+          'Đối với công ty hoạt động trong lĩnh vực ví điện tử, Thỏa thuận cổ đông có ý nghĩa đặc biệt quan trọng bởi đây là lĩnh vực kinh doanh có tính đặc thù, chịu sự điều chỉnh không chỉ của pháp luật doanh nghiệp mà còn của pháp luật về thanh toán không dùng tiền mặt và hoạt động cung ứng dịch vụ trung gian thanh toán. Hiện nay, khung pháp lý về lĩnh vực này bao gồm Nghị định 52/2024/NĐ-CP về thanh toán không dùng tiền mặt và các quy định của Ngân hàng Nhà nước về hoạt động cung ứng dịch vụ trung gian thanh toán; đến tháng 5/2026, Ngân hàng Nhà nước đã ban hành Văn bản hợp nhất 76/VBHN-NHNN về hoạt động cung ứng dịch vụ trung gian thanh toán.',
+          'Vì vậy, dịch vụ pháp lý của chúng tôi không chỉ đơn thuần là soạn một văn bản ghi nhận tỷ lệ sở hữu của các cổ đông mà còn phải thiết kế cơ chế quản trị và kiểm soát phù hợp với đặc điểm của doanh nghiệp, bảo đảm thỏa thuận giữa các cổ đông không xung đột với Điều lệ công ty, Luật Doanh nghiệp và các quy định pháp luật chuyên ngành có liên quan.',
+        ],
+      },
+      {
+        heading: '3.6.2. Nội dung dịch vụ.',
+        paragraphs: [
+          'Thứ nhất, tư vấn và xác định cấu trúc quyền sở hữu của các cổ đông. Rà soát cơ cấu cổ đông hiện tại hoặc dự kiến của doanh nghiệp, tỷ lệ sở hữu của từng cổ đông, quyền biểu quyết, quyền nhận cổ tức, quyền tham gia quản trị và các quyền kinh tế khác. Trên cơ sở đó, luật sư tư vấn cách thức ghi nhận quyền và lợi ích của từng nhóm cổ đông trong Thỏa thuận cổ đông. Đối với doanh nghiệp có khả năng tiếp nhận vốn từ nhà đầu tư mới trong các vòng gọi vốn, nội dung này còn có thể bao gồm cơ chế bảo vệ tỷ lệ sở hữu của cổ đông hiện hữu, quyền ưu tiên tham gia các vòng gọi vốn tiếp theo và cơ chế xử lý trường hợp cổ đông bị pha loãng tỷ lệ sở hữu.',
+          'Thứ hai, tư vấn cơ chế quản trị và quyền kiểm soát công ty. Đây là một trong những nội dung quan trọng nhất của Thỏa thuận cổ đông. Xây dựng các quy định về cơ cấu Hội đồng quản trị, quyền đề cử và bổ nhiệm thành viên Hội đồng quản trị, quyền đề cử người quản lý, tỷ lệ biểu quyết đối với từng nhóm quyết định và các vấn đề phải được sự chấp thuận của một tỷ lệ cổ đông nhất định. Đặc biệt, đối với công ty, có thể xác định một nhóm vấn đề trọng yếu mà Hội đồng quản trị hoặc Đại hội đồng cổ đông không được quyết định nếu chưa có sự đồng ý của cổ đông hoặc nhóm cổ đông đáp ứng một tỷ lệ biểu quyết nhất định.',
+          'Ví dụ, các vấn đề trọng yếu có thể bao gồm: thay đổi ngành nghề kinh doanh cốt lõi; thay đổi mô hình kinh doanh ví điện tử; đầu tư hoặc bán tài sản có giá trị lớn; vay hoặc huy động vốn vượt một ngưỡng nhất định; phát hành thêm cổ phần; sáp nhập, hợp nhất, chia, tách hoặc giải thể công ty; thay đổi Điều lệ; giao dịch với bên có liên quan; hoặc thực hiện các giao dịch có khả năng làm thay đổi đáng kể quyền kiểm soát công ty.',
+          'Thứ ba, tư vấn cơ chế chuyển nhượng cổ phần và kiểm soát sự gia nhập của cổ đông mới. Thỏa thuận có thể quy định quyền ưu tiên mua cổ phần, quyền chào bán trước, quyền cùng bán, quyền yêu cầu bán cùng, điều kiện đối với người nhận chuyển nhượng và thủ tục thực hiện việc chuyển nhượng. Mục đích là tránh trường hợp một cổ đông tự ý chuyển nhượng cổ phần cho một bên thứ ba không phù hợp với định hướng của công ty hoặc làm thay đổi cơ cấu kiểm soát mà các cổ đông còn lại không lường trước được. Những nội dung này phải được thiết kế tương thích với các quy định của Luật Doanh nghiệp về cổ phần và chuyển nhượng cổ phần. Luật Doanh nghiệp 2020 hiện là văn bản pháp luật nền tảng điều chỉnh tổ chức và hoạt động của công ty cổ phần.',
+          'Thứ tư, tư vấn cơ chế bảo vệ quyền lợi của cổ đông và xử lý xung đột lợi ích. Xây dựng các điều khoản về bảo mật thông tin, không cạnh tranh, không lôi kéo nhân sự, bảo vệ tài sản trí tuệ, xử lý giao dịch với bên có liên quan và nghĩa vụ cung cấp thông tin giữa các cổ đông. Đối với công ty, nội dung này đặc biệt quan trọng bởi giá trị của doanh nghiệp không chỉ nằm ở vốn mà còn nằm ở công nghệ, phần mềm, dữ liệu, hệ thống vận hành, quan hệ với ngân hàng và đối tác thanh toán, giấy phép/điều kiện hoạt động và đội ngũ nhân sự chủ chốt.',
+          'Thứ năm, xây dựng cơ chế xử lý tình trạng bế tắc trong quản trị. Trong trường hợp các cổ đông có tỷ lệ sở hữu tương đối cân bằng và không thể đạt được sự thống nhất về một vấn đề quan trọng, doanh nghiệp có thể rơi vào tình trạng không thể ra quyết định. Vì vậy, Thỏa thuận cổ đông có thể thiết lập một quy trình xử lý theo từng bước, chẳng hạn như đàm phán giữa các cổ đông → hòa giải → đưa vấn đề cho bên thứ ba độc lập → cơ chế mua bán cổ phần hoặc cơ chế thoái vốn nếu bế tắc kéo dài.',
+          'Thứ sáu, tư vấn cơ chế thoái vốn và các sự kiện làm thay đổi quyền sở hữu. Đối với startup, khả năng gọi vốn, có nhà đầu tư chiến lược, sáp nhập hoặc bán doanh nghiệp là những tình huống có thể xảy ra. Do đó, thiết kế trước các cơ chế như quyền bán cổ phần, quyền yêu cầu mua lại trong một số trường hợp, quyền cùng bán, quyền yêu cầu bán cùng hoặc cơ chế Exit. Việc chuẩn bị trước những cơ chế này giúp hạn chế tranh chấp khi doanh nghiệp bước vào giai đoạn gọi vốn hoặc thay đổi cơ cấu sở hữu.',
+        ],
+      },
+      {
+        heading: '3.6.3. Phạm vi dịch vụ.',
+        paragraphs: [
+          'Phạm vi dịch vụ tư vấn và soạn thảo Hợp đồng Thỏa thuận cổ đông được xác định cụ thể nhằm làm rõ ranh giới trách nhiệm của chúng tôi cũng như quyền lợi của khách hàng trong suốt quá trình cung cấp dịch vụ pháp lý. Việc thiết lập phạm vi chi tiết ngay từ đầu giúp các bên nắm rõ lộ trình triển khai, tối ưu hóa cơ chế phối hợp và ngăn ngừa những hiểu lầm không đáng có liên quan đến nghĩa vụ của tư vấn pháp lý. Phạm vi dịch vụ cụ thể được xác định thông qua các khía cạnh sau:',
+          'Về đối tượng áp dụng, dịch vụ được thiết kế trực tiếp cho các cổ đông của công ty hoạt động trong lĩnh vực ví điện tử và trung gian thanh toán, bao gồm cổ đông sáng lập, cổ đông hiện hữu, các nhà đầu tư chiến lược, nhà đầu tư tài chính cũng như các bên dự kiến tham gia vào các vòng gọi vốn tương lai. Đồng thời, đối tượng áp dụng còn bao gồm chính bản thân công ty với tư cách là chủ thể chịu sự tác động trực tiếp từ các cơ chế quản trị, điều hành, kiểm soát và chuyển nhượng vốn được xác lập trong Thỏa thuận cổ đông.',
+          'Về thời điểm và thời hạn áp dụng, dịch vụ được thực hiện xuyên suốt toàn bộ thời gian thiết lập thỏa thuận, bắt đầu từ giai đoạn tiếp nhận nhu cầu ban đầu cho đến khi hoàn thiện, ký kết và hỗ trợ triển khai thực tế. Cụ thể, giai đoạn đầu tiên là rà soát và đánh giá pháp lý, nơi chúng tôi nghiên cứu cơ cấu cổ đông, Điều lệ công ty, Giấy chứng nhận đăng ký doanh nghiệp, các thỏa thuận đầu tư hiện hữu và hồ sơ gọi vốn để xác định rủi ro. Giai đoạn thứ hai tập trung vào tư vấn và xây dựng cấu trúc, thông qua việc đàm phán với từng nhóm cổ đông nhằm làm rõ mục tiêu riêng biệt—như bảo vệ quyền kiểm soát cho cổ đông sáng lập hay cơ chế thoái vốn cho nhà đầu tư—để thiết kế cấu trúc phù hợp. Giai đoạn thứ ba là soạn thảo và hoàn thiện hợp đồng, trong đó chúng tôi sẽ xây dựng dự thảo, bảo đảm tính đồng bộ với Điều lệ, đồng thời tham gia các cuộc họp đàm phán để giải thích và bảo vệ các điều khoản. Giai đoạn cuối cùng là hỗ trợ ký kết và triển khai, bao gồm việc tư vấn thủ tục, chuẩn bị hồ sơ đồng bộ hóa vào Điều lệ hoặc Nghị quyết công ty, và có thể mở rộng thành dịch vụ tư vấn pháp lý định kỳ trong quá trình thực thi thỏa thuận nếu các bên có nhu cầu.',
+          'Về giới hạn và hạn chế bởi quy định pháp luật, việc tư vấn và thiết kế Thỏa thuận cổ đông bị hạn chế bởi khung pháp lý cấm hoặc bắt buộc của Luật Doanh nghiệp 2020 cùng các quy định pháp luật chuyên ngành về thanh toán không dùng tiền mặt và trung gian thanh toán, cụ thể như Nghị định 52/2024/NĐ-CP và Văn bản hợp nhất 76/VBHN-NHNN năm 2026 của Ngân hàng Nhà nước. Các điều khoản thỏa thuận giữa các cổ đông dù dựa trên sự tự nguyện tuyệt đối nhưng cũng không được trái với các quy định mang tính cấm đoán của pháp luật, không được vi phạm các điều kiện về tỷ lệ sở hữu nước ngoài, điều kiện nhân sự hay các chuẩn mực quản trị bắt buộc do Ngân hàng Nhà nước quy định đối với tổ chức cung ứng dịch vụ trung gian thanh toán.',
+          'Về phạm vi dịch vụ này thì hoàn toàn không bao gồm việc bảo đảm hay cam kết rằng doanh nghiệp sẽ được Ngân hàng Nhà nước cấp Giấy phép hoạt động cung ứng dịch vụ trung gian thanh toán (ví điện tử), cũng như không bao gồm việc đại diện thay thế cơ quan nhà nước trong việc chấp thuận hay thẩm định các điều kiện hoạt động của doanh nghiệp. Việc cấp phép, phê duyệt hoặc giám sát hoạt động cung ứng dịch vụ thanh toán vẫn thuộc thẩm quyền định đoạt riêng biệt và tuyệt đối của Ngân hàng Nhà nước và các cơ quan nhà nước có thẩm quyền theo quy định.',
+        ],
+      },
+      {
+        heading: '3.6.4. Mục đích dịch vụ.',
+        paragraphs: [
+          'Thứ nhất, hạn chế tranh chấp giữa các cổ đông. Trong thực tế, Điều lệ công ty thường chỉ quy định những vấn đề mang tính tổ chức và quản trị theo yêu cầu của pháp luật. Trong khi đó, các cổ đông có thể có những thỏa thuận cụ thể hơn về quyền kiểm soát, chuyển nhượng cổ phần, gọi vốn, thoái vốn hoặc xử lý khi có bất đồng. Thỏa thuận cổ đông giúp chuyển những thống nhất này thành các điều khoản có tính ràng buộc giữa các bên, qua đó giảm nguy cơ tranh chấp khi quyền lợi của các cổ đông phát sinh xung đột.',
+          'Thứ hai, xác định rõ ai có quyền quyết định vấn đề gì. Đây là vấn đề đặc biệt quan trọng đối với công ty. Khi doanh nghiệp phát triển, quyết định của một nhóm cổ đông có thể ảnh hưởng trực tiếp đến chiến lược kinh doanh, công nghệ, vốn đầu tư và khả năng duy trì hoạt động. Thỏa thuận cổ đông giúp phân định trước quyền quyết định, quyền phủ quyết và những vấn đề phải đạt được sự đồng thuận, từ đó hạn chế tình trạng một cổ đông hoặc một nhóm cổ đông đơn phương kiểm soát các quyết định quan trọng.',
+          'Thứ ba, bảo vệ nhà đầu tư và cổ đông sáng lập trong quá trình gọi vốn. Khi công ty huy động vốn, tỷ lệ sở hữu của cổ đông có thể thay đổi. Nếu không có cơ chế bảo vệ phù hợp, cổ đông sáng lập có thể mất quyền kiểm soát hoặc nhà đầu tư có thể không có đủ quyền bảo vệ khoản đầu tư của mình. Thỏa thuận cổ đông có thể giải quyết vấn đề này thông qua các cơ chế như quyền ưu tiên đầu tư, quyền tham gia vòng gọi vốn mới, quyền phủ quyết đối với vấn đề trọng yếu và cơ chế bảo vệ khi có giao dịch làm thay đổi quyền kiểm soát.',
+          'Thứ tư, kiểm soát việc chuyển nhượng cổ phần. Đối với một doanh nghiệp, việc một cổ đông chuyển nhượng cổ phần cho một bên thứ ba không phù hợp có thể ảnh hưởng đến chiến lược kinh doanh, quyền kiểm soát và thậm chí tạo ra những vấn đề về quản trị, tuân thủ. Thỏa thuận cổ đông cho phép các bên dự liệu trước trường hợp này và xây dựng cơ chế kiểm soát việc chuyển nhượng.',
+          'Thứ năm, xử lý tình trạng bế tắc giữa các cổ đông. Thay vì đến khi tranh chấp xảy ra mới tìm phương án giải quyết, Thỏa thuận cổ đông có thể thiết lập sẵn cơ chế xử lý deadlock. Đây là giá trị quan trọng của dịch vụ: không chỉ giải quyết tranh chấp đã xảy ra mà còn dữ liệu rủi ro và thiết kế cơ chế pháp lý để ngăn tranh chấp phát sinh.',
+          'Thứ sáu, bảo đảm sự thống nhất giữa quyền lợi của cổ đông và yêu cầu pháp luật chuyên ngành. Công ty ví điện tử không phải là một doanh nghiệp thông thường chỉ chịu sự điều chỉnh của Luật Doanh nghiệp. Hoạt động thanh toán không dùng tiền mặt và trung gian thanh toán có khung pháp lý chuyên ngành của Ngân hàng Nhà nước; hiện đã có Nghị định 52/2024/NĐ-CP và Văn bản hợp nhất 76/VBHN-NHNN năm 2026 về hoạt động cung ứng dịch vụ trung gian thanh toán. Do đó, việc tư vấn Thỏa thuận cổ đông cần đặt trong tổng thể pháp lý của doanh nghiệp, tránh thiết kế các quyền của cổ đông theo cách có thể ảnh hưởng đến khả năng tuân thủ pháp luật hoặc hoạt động được cấp phép của công ty.',
+        ],
+      },
+    ],
+  },
   'mo-va-su-dung-vi-dien-tu': {
     sourceHeading: '4.1. Hợp đồng mở và sử dụng ví điện tử (*).',
     sections: [
@@ -454,6 +745,160 @@ export const contractReportContent: Record<string, ContractReportContent> = {
           'Thứ nhất, là cơ sở để xác định quyền và nghĩa vụ của mỗi bên trong những trường hợp như: khách hàng được sử dụng những dịch vụ nào, quyền khiếu nại, phải trả những loại phí gì và nếu không trả thì sao, quá trình giao dịch của khách hàng gặp gián đoạn thì trách nhiệm thuộc về hệ thống ví hay của ngân hàng, quyền tạm khóa ví, yêu cầu xác thực nếu hệ thống của ngân hàng và ví từ chối giao dịch bất thường khi có nghi ngờ gian lận, giả mạo,…',
           'Thứ hai, là căn cứ để bảo vệ khách hàng nếu như thông tin của mình bị lộ lọt bởi hệ thống ví hoặc ngân hàng thì khách hàng có thể khiếu nại hoặc yêu cầu bồi thường. Đồng thời, cũng là căn cứ để bảo vệ doanh nghiệp nếu như khách hàng lợi dụng ví điện tử để thực hiện hành vi trái phép như rửa tiền, tài trợ khủng bố,…gây nên tổn thất tài chính, uy tín của doanh nghiệp khi đó cơ quan nhà nước sẽ kiểm tra và ảnh hưởng đến giấy phép hoạt động kinh doanh của doanh nghiệp thì nếu như điều này đã được dự liệu sẵn trong điều khoản của hợp đồng thì trách nhiệm thuộc sẽ thuộc về khách hàng, giảm tổn thất cho doanh nghiệp.',
           'Thứ ba, là công cụ ràng buộc để các bên tuân thủ. Doanh nghiệp hoạt động trong lĩnh vực cung ứng ví điện tử chịu sự quản lý chặt chẽ của Ngân hàng Nhà nước đặt ra nhiều yêu cầu về cấp phép, vận hành, liên kết ngân hàng, quản lý rủi ro, xác minh khách hàng, an toàn dịch vụ và luôn tiềm ẩn rủi ro. Do đó, hợp đồng phải được thiết kế đúng pháp luật một cách chặt chẽ để các bên tuân thủ giảm thiểu rủi ro và đảm bảo an toàn hệ thống ví cho doanh nghiệp.',
+        ],
+      },
+    ],
+  },
+  'chinh-sach-du-lieu-ca-nhan': {
+    sourceHeading: '5.1. Chính sách bảo vệ dữ liệu cá nhân (*).',
+    sections: [
+      {
+        heading: '5.1.1. Giới thiệu dịch vụ.',
+        paragraphs: [
+          'Chính sách bảo vệ dữ liệu cá nhân là văn bản pháp lý quy định chi tiết toàn bộ quá trình xử lý dữ liệu của Ví điện tử, bao gồm các bước thu thập, lưu trữ, sử dụng, phân tích, mã hóa và chia sẻ thông tin người dùng. Trong mô hình kinh doanh Fintech cung ứng dịch vụ trung gian thanh toán, hệ thống dữ liệu tục có sự truyền tải, đối soát thông tin qua lại với nhiều bên thứ ba như tổ chức cung cấp giải pháp eKYC, nhà cung cấp dịch vụ máy chủ đám mây và các đơn vị chấp nhận thanh toán. Về bản chất, dữ liệu mà nền tảng Ví điện tử tiếp nhận và quản lý thuộc nhóm dữ liệu cá nhân nhạy cảm, có ảnh hưởng trực tiếp đến an ninh tài chính của người dùng. Các trường thông tin cơ bản bao gồm ảnh chụp căn cước công dân, dữ liệu sinh trắc học khuôn mặt, thông tin tài khoản ngân hàng liên kết, biến động số dư và chi tiết lịch sử giao dịch. Bất kỳ một sự can thiệp trái phép hay lỗ hổng nào trong quá trình lưu trữ đều xâm phạm trực tiếp đến quyền nhân thân và tạo cơ hội cho các hành vi gian lận tài chính. Việc xây dựng một chính sách bảo vệ dữ liệu toàn diện giúp doanh nghiệp thiết lập kỷ luật vận hành nội bộ, hợp pháp hóa hoạt động thu thập thông tin người dùng theo quy định tại Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15 và Nghị định 356/2025/NĐ-CP và xây dựng nền tảng niềm tin vững chắc với khách hàng khi sử dụng dịch vụ cũng như đáp ứng tiêu chuẩn của các đối tác tài chính, ngân hàng.',
+        ],
+      },
+      {
+        heading: '5.1.2. Nội dung dịch vụ.',
+        paragraphs: [
+          'Thứ nhất, soạn thảo bản Chính sách Bảo vệ dữ liệu cá nhân chuẩn chỉnh, minh bạch để hiển thị công khai trên giao diện (App và Website). Chính sách quy định rõ mục đích thu thập, phạm vi dữ liệu, thời gian lưu trữ và cơ chế để người dùng thực hiện các quyền (truy cập, chỉnh sửa, xóa dữ liệu, rút lại sự đồng ý). Đồng thời, tư vấn chuẩn hóa luồng hiển thị (UI/UX) trên ứng dụng để việc thu thập sự đồng ý hợp pháp được thực hiện.',
+          'Thứ hai, tư vấn và soạn thảo các điều khoản ràng buộc trách nhiệm pháp lý với các bên thứ ba tham gia vào luồng xử lý dữ liệu (nhà cung cấp máy chủ đám mây, đối tác giải pháp eKYC, các đơn vị chấp nhận thanh toán và tổ chức tín dụng liên kết).',
+          'Thứ ba, xây dựng các quy chế bảo mật thông tin và cơ chế phân quyền truy cập dữ liệu nội bộ rõ ràng cho từng phòng ban, đảm bảo an toàn cho các dữ liệu quan trọng như hồ sơ KYC, lịch sử giao dịch.',
+          'Thứ tư, cung cấp biểu mẫu, rà soát pháp lý và hỗ trợ chuẩn hóa Hồ sơ Đánh giá tác động xử lý dữ liệu cá nhân (bao gồm cả hồ sơ chuyển dữ liệu ra nước ngoài) để doanh nghiệp nộp cho cơ quan nhà nước, kèm theo quy trình hướng dẫn gửi thông báo khi xảy ra sự cố rò rỉ.',
+        ],
+      },
+      {
+        heading: '5.1.3. Phạm vi dịch vụ.',
+        paragraphs: [
+          'Trọng tâm cốt lõi của dịch vụ là việc soạn thảo bản Chính sách bảo vệ dữ liệu cá nhân chuẩn chỉnh, minh bạch và đáp ứng tuyệt đối các yêu cầu của pháp luật. Song song với đó, đối với nền tảng giao diện người dùng, dịch vụ hỗ trợ trực tiếp làm việc với đội ngũ IT/Product để tư vấn tối ưu luồng hiển thị (UI/UX) trên ứng dụng. Việc tối ưu các bước hiển thị như pop-up, checkbox giúp cơ chế lấy sự đồng ý của khách hàng diễn ra hợp pháp, loại bỏ các giao diện gây hiểu lầm dẫn đến rủi ro thanh tra. Đồng thời, dịch vụ cung cấp hướng dẫn cách gửi thông báo hợp lệ cho người dùng khi chính sách có sự thay đổi hoặc khi xảy ra sự cố.',
+          'Bên cạnh các chính sách hướng tới người dùng và các điều khoản ràng buộc pháp lý với đối tác thứ ba, dịch vụ còn thiết lập các quy chế bảo mật thông tin và cơ chế phân quyền truy cập dữ liệu nội bộ rõ ràng cho từng phòng ban. Việc này đảm bảo nguyên tắc chỉ những cá nhân có thẩm quyền mới được phép tiếp cận các đối tượng dữ liệu quan trọng của khách hàng như hồ sơ KYC, lịch sử giao dịch.',
+          'Đặc biệt, đối với Hồ sơ Đánh giá tác động xử lý dữ liệu cá nhân (DPIA), bao gồm cả hồ sơ chuyển dữ liệu ra nước ngoài nếu sử dụng máy chủ quốc tế, dịch vụ chỉ đóng vai trò hỗ trợ pháp lý: cung cấp biểu mẫu chuẩn định, xây dựng các lập luận pháp lý, đồng thời hướng dẫn và chuẩn hóa các dữ liệu kỹ thuật do bộ phận IT của quý công ty cung cấp để tổng hợp thành một bộ hồ sơ hoàn chỉnh. Toàn bộ bản Chính sách bảo vệ dữ liệu, quy chế vận hành và bộ hồ sơ DPIA đều được xây dựng dựa trên sự tuân thủ nghiêm ngặt khuôn khổ của Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15 và Nghị định 356/2025/NĐ-CP, Luật An toàn thông tin mạng và các quy định bảo mật chuyên ngành của Ngân hàng Nhà nước, qua đó chuẩn bị sẵn sàng để quý công ty tự thực hiện thủ tục nộp lên Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao (Bộ Công an) theo yêu cầu tại Khoản 4 Điều 24 Nghị định.',
+          'Về thời điểm áp dụng, lộ trình cung cấp dịch vụ được xây dựng liên tục, trải dài từ khâu thẩm định hiện trạng, soạn thảo Chính sách bảo vệ dữ liệu cá nhân, đến việc tư vấn tối ưu luồng giao diện trên ứng dụng và kéo dài cho tới khi hoàn tất nghiệm thu, bàn giao bộ hồ sơ DPIA. Sau các mốc này, dịch vụ vẫn tiếp tục duy trì cơ chế tư vấn thường trực nhằm hướng dẫn quy trình thông báo khẩn cấp khi phát sinh sự cố rò rỉ thông tin trong suốt thời hạn hiệu lực của hợp đồng.',
+          'Phạm vi dịch vụ không bao gồm việc đại diện doanh nghiệp trực tiếp nộp hồ sơ hay giải trình với Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao (Bộ Công an). Dịch vụ cũng không đi vào thẩm định sâu vào kiến trúc cơ sở dữ liệu (backend) hay mã nguồn hệ thống; toàn bộ tư vấn sẽ được thực hiện dựa trên các mô tả kỹ thuật do quý công ty chủ động cung cấp. Cuối cùng, dịch vụ không bao gồm việc đại diện tham gia làm việc với Cơ quan điều tra nếu sự cố rò rỉ dữ liệu chuyển biến thành vụ án hình sự và không chịu trách nhiệm liên đới đối với các quyết định xử phạt vi phạm hành chính hay bồi thường thiệt hại nếu sự cố xuất phát từ việc công ty vận hành sai lệch, không tuân thủ đúng các khuyến nghị pháp lý đã được tư vấn.',
+        ],
+      },
+      {
+        heading: '5.1.4. Mục đích dịch vụ.',
+        paragraphs: [
+          'Việc xây dựng một hệ thống chính sách chuẩn mực giúp doanh nghiệp của nhà đầu tư có thể chủ động kiểm soát và giảm thiểu tối đa các rủi ro pháp lý nghiêm trọng. Thiếu sót trong bảo vệ dữ liệu có thể dẫn đến hậu quả như bị phạt tiền nặng, đình chỉ hoạt động xử lý dữ liệu, thu hồi giấy phép hoạt động hoặc thậm chí truy cứu trách nhiệm hình sự theo Nghị định 13 khi xảy ra sự cố rò rỉ.',
+          'Ở góc độ chiến lược kinh doanh, việc sở hữu quy trình bảo mật và khung pháp lý xử lý dữ liệu cá nhân chặt chẽ sẽ giải quyết bài toán hội nhập hạ tầng tài chính. Đây là điều kiện thiết yếu giúp doanh nghiệp dễ dàng vượt qua các vòng thẩm định kỹ thuật và pháp lý khi kết nối API sâu vào hệ thống Core Banking của các ngân hàng thương mại hay các đối tác cung cấp dịch vụ đám mây quốc tế. Đồng thời, sự minh bạch trong việc bảo vệ dữ liệu là minh chứng rõ nét nhất cho năng lực quản trị rủi ro chuyên nghiệp, tạo lợi thế đàm phán cực lớn để nâng cao định giá công ty khi có nhu cầu gọi vốn từ các quỹ đầu tư quốc tế.',
+        ],
+      },
+    ],
+  },
+  'quy-trinh-khieu-nai-tra-soat': {
+    sourceHeading: '5.2. Quy trình xử lý khiếu nại và tra soát (*).',
+    sections: [
+      {
+        heading: '5.2.1. Giới thiệu dịch vụ.',
+        paragraphs: [
+          'Trong quá trình vận hành, doanh nghiệp không chỉ cần luật sư khi đã có tranh chấp, bị thanh tra, bị đối tác chậm thanh toán hoặc phát sinh khiếu nại lao động. Đây là dịch vụ tư vấn thường xuyên, đồng hành cùng công ty trong suốt quá trình tiếp nhận, xử lý khiếu nại và giải quyết các sự cố phát sinh của ví điện tử (e-wallet). Ví điện tử là sản phẩm trung gian thanh toán chịu sự quản lý chặt chẽ của Ngân hàng Nhà nước (NHNN) và nhiều quy định pháp luật liên ngành (bảo vệ quyền lợi người tiêu dùng, phòng chống rửa tiền, an ninh mạng...), nên đòi hỏi tư vấn có chuyên môn sâu và cập nhật liên tục, thay vì tư vấn một lần. Thay vì chỉ xử lý pháp lý theo từng vụ việc riêng lẻ, doanh nghiệp có thể có một đầu mối pháp lý đồng hành định kỳ, hiểu mô hình hoạt động, nắm hồ sơ, theo sát giao dịch và hỗ trợ ban lãnh đạo kiểm soát rủi ro trong quá trình kinh doanh.',
+        ],
+      },
+      {
+        heading: '5.2.2. Nội dung dịch vụ.',
+        paragraphs: [
+          'Tầng 1: Tiếp nhận, Phân loại & Xử lý Tuyến đầu Xây dựng Bộ Quy tắc Bán hàng & Ứng xử để đóng gói kịch bản phản hồi cho bộ phận CSKH/Telesales, đảm bảo từng câu từ không phát sinh nghĩa vụ pháp lý ngoài ý muốn hoặc vi phạm quy định về quảng cáo dịch vụ tài chính. Đồng thời, thực hiện phân loại rủi ro lập tức thành Nhóm A (Lỗi hệ thống/Kỹ thuật: treo tiền, hạch toán trùng, không gạch nợ), Nhóm B (Tranh chấp Thương mại: người mua không nhận được hàng từ Merchant, khiếu nại dịch vụ bên thứ ba) và Nhóm C (Nghi vấn Gian lận/Tội phạm: nghi ngờ hack tài khoản, lừa đảo chuyển tiền, KYC giả). Thiết lập hệ thống thời gian phản hồi chuẩn hóa (Legal SLA) cam kết các mốc thời gian tiếp nhận và xử lý sự cố chuẩn pháp lý (ví dụ: phản hồi trong 24h, tra soát tối đa 30-45 ngày làm việc theo quy định NHNN).',
+          'Tầng 2: Thẩm định & Xử lý Chuyên sâu Thiết lập cơ chế phong tỏa và tạm dừng giao dịch, xây dựng quy trình vận hành chuẩn cho phép bộ phận Pháp chế/Rủi ro tạm khóa tài khoản hoặc phong tỏa số dư nghi vấn đúng căn cứ pháp lý để tránh bị người dùng kiện ngược về hành vi "chiếm dụng tài sản trái phép". Xây dựng quy trình phối hợp xử lý đa bên, bao gồm phối hợp với Ngân hàng liên kết và Trung tâm chuyển mạch để tra soát dòng tiền, cũng như phối hợp với Đơn vị chấp nhận thanh toán trong việc giữ lại tiền thanh toán khi có khiếu nại gian lận.',
+          'Tầng 3: Xử lý Tranh chấp Bậc cao & Đại diện Pháp lý Xây dựng quy trình báo cáo, giải trình chuyên nghiệp (Giải trình Pháp lý với cơ quan có thẩm quyền) khi người dùng nộp đơn khiếu nại lên Cục Cạnh tranh và Bảo vệ người tiêu dùng hoặc Thanh tra NHNN.',
+        ],
+      },
+      {
+        heading: '5.2.3. Phạm vi dịch vụ.',
+        paragraphs: [
+          'Phạm vi dịch vụ bao gồm tiếp nhận, phân loại, theo dõi và phối hợp xử lý khiếu nại, tra soát liên quan đến giao dịch ví điện tử; không thay thế thẩm quyền giải quyết của cơ quan nhà nước, cơ quan tài phán hoặc nghĩa vụ kỹ thuật của đơn vị vận hành hệ thống.',
+        ],
+      },
+      {
+        heading: '5.2.4. Mục đích dịch vụ.',
+        paragraphs: [
+          'Dịch vụ giúp doanh nghiệp tránh rủi ro bị xử phạt hành chính hoặc bị kiện tụng kéo dài do xử lý khiếu nại sai quy trình hoặc vi phạm thời hạn luật định. Việc chậm trễ giải quyết tra soát hoặc tự ý phong tỏa tài sản khách hàng không đúng căn cứ có thể dẫn đến việc doanh nghiệp bị khiếu kiện, xử phạt theo quy định pháp luật về bảo vệ quyền lợi người tiêu dùng và hoạt động trung gian thanh toán; việc được tư vấn chuẩn hóa quy trình giúp doanh nghiệp ứng phó minh bạch, đúng luật.',
+          'Giảm thời gian xử lý sự cố và khủng hoảng truyền thông nhờ chúng tôi cung cấp sẵn bộ playbook biểu mẫu chuẩn hóa và kịch bản ứng phó chi tiết. Điều này đặc biệt có ý nghĩa khi xảy ra sự cố kỹ thuật diện rộng hoặc rò rỉ dữ liệu đòi hỏi phải phản ứng nhanh trong vòng 24 đến 72 giờ, giúp ngăn chặn sự cố leo thang gây tổn hại nghiêm trọng đến uy tín thương hiệu và giá trị định giá với nhà đầu tư.',
+          'Kiểm soát rủi ro pháp lý liên quan đến tội phạm tài chính, rửa tiền và tuân thủ dữ liệu cá nhân - những vấn đề cốt lõi quyết định sự sống còn của một dự án fintech. Việc tư vấn thường xuyên giúp doanh nghiệp thiết lập chặt chẽ quy trình phối hợp với cơ quan công an (A05/C05) và tuân thủ nghiêm ngặt Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15 và Nghị định 356/2025/NĐ-CP về bảo vệ dữ liệu, tránh rơi vào các khoản phạt khổng lồ hoặc bị đình chỉ hoạt động do lộ thông tin người dùng.',
+          'Hỗ trợ đội ngũ pháp chế/tuân thủ nội bộ của doanh nghiệp vốn thường có nguồn lực mỏng, xử lý khối lượng công việc tranh chấp lớn khi lượng người dùng tăng trưởng nhanh. Với tính chất của một mô hình kinh doanh công nghệ có tần suất phát sinh sự cố vận hành cao, doanh nghiệp thường khó bố trí đủ nhân sự pháp lý chuyên sâu để xử lý đồng thời các vấn đề về khiếu nại, kỹ thuật và hình sự; chúng tôi đóng vai trò như bộ phận pháp chế mở rộng, giúp san sẻ áp lực này.',
+          'Tạo niềm tin tuyệt đối với nhà đầu tư và cơ quan quản lý (NHNN, Bộ Công an), nhờ hệ thống quản trị rủi ro vận hành được thiết kế bài bản, chuyên nghiệp và có năng lực ứng phó khủng hoảng thực chiến. Một doanh nghiệp sở hữu khung quy trình 3 tầng và bộ playbook tình huống hoàn chỉnh sẽ chứng minh được năng lực kiểm soát rủi ro vững chắc, giúp nhà đầu tư hoàn toàn yên tâm rót vốn và đồng hành dài hạn.',
+        ],
+      },
+    ],
+  },
+  'cap-nhat-phap-ly-dinh-ky': {
+    sourceHeading: '5.3. Dịch vụ cập nhật pháp lý định kỳ.',
+    sections: [
+      {
+        heading: '5.3.1. Giới thiệu dịch vụ.',
+        paragraphs: [
+          'Lĩnh vực Fintech nói chung và dịch vụ ví điện tử nói riêng chịu sự điều chỉnh của hệ thống pháp luật vô cùng phức tạp và liên tục biến động. Các quy định về trung gian thanh toán, phòng chống rửa tiền, an toàn - bảo mật hệ thống công nghệ thông tin, định danh khách hàng điện tử (eKYC) cũng như bảo vệ dữ liệu cá nhân thường xuyên được Ngân hàng Nhà nước và các cơ quan quản lý ban hành mới, sửa đổi hoặc bổ sung. Trong bối cảnh đó, nếu doanh nghiệp chỉ tiếp cận tư vấn pháp lý theo từng vụ việc phát sinh, nguy cơ đối mặt với các rủi ro tuân thủ là rất lớn do cập nhật không kịp thời hoặc áp dụng sai quy định. Dịch vụ tư vấn thường xuyên thuộc nhánh cập nhật pháp lý định kỳ được thiết kế như một giải pháp cảnh báo sớm và chủ động, đồng hành cùng doanh nghiệp trong việc theo dõi, phân tích và thích ứng với những thay đổi chính sách, bảo đảm mọi hoạt động vận hành của ví điện tử luôn duy trì trạng thái tuân thủ pháp luật liên tục và an toàn.',
+        ],
+      },
+      {
+        heading: '5.3.2. Nội dung dịch vụ.',
+        paragraphs: [
+          'Nội dung dịch vụ được triển khai thông qua quy trình bốn bước chuyên sâu nhằm bảo đảm tính kịp thời và chính xác trong suốt thời gian hợp đồng:',
+          'Thứ nhất, chúng tôi thực hiện theo dõi và thu thập định kỳ toàn bộ các văn bản quy phạm pháp luật, văn bản chỉ đạo, dự thảo chính sách mới ban hành từ Ngân hàng Nhà nước Việt Nam, Bộ Thông tin và Truyền thông, Bộ Công an và các cơ quan có thẩm quyền liên quan trực tiếp đến hoạt động cung ứng dịch vụ trung gian thanh toán, ngân hàng số và giao dịch điện tử.',
+          'Thứ hai, chúng tôi tiến hành phân tích chuyên sâu nội dung thay đổi của văn bản luật, đối chiếu trực tiếp với mô hình vận hành, các tính năng sản phẩm và quy trình nghiệp vụ hiện tại của doanh nghiệp. Qua đó, chúng tôi xác định cụ thể các mốc thời hạn áp dụng, nghĩa vụ pháp lý mới phát sinh, các điểm chưa tuân thủ hoặc nguy cơ rủi ro mà doanh nghiệp có thể gặp phải nếu không điều chỉnh kịp thời.',
+          'Thứ ba, sau bước phân tích, chúng tôi tổng hợp thông tin để xây dựng và gửi cho doanh nghiệp Báo cáo cập nhật pháp lý định kỳ (theo tháng hoặc quý). Báo cáo này không chỉ tóm tắt các điểm mới của văn bản luật mà còn đi kèm các khuyến nghị hành động chi tiết, giúp Ban Điều hành và bộ phận pháp chế nội bộ dễ dàng nắm bắt bản chất vấn đề và chủ động đề ra kế hoạch điều chỉnh phù hợp.',
+          'Thứ tư, chúng tôi phối hợp tổ chức các buổi tham vấn trực tiếp hoặc tập huấn nội bộ cho đội ngũ quản lý và các phòng ban liên quan (kỹ thuật, vận hành, kiểm soát rủi ro). Tại các buổi trao đổi này, chúng tôi giải đáp trực tiếp các vướng mắc phát sinh trong quá trình triển khai quy định mới, đồng thời hỗ trợ rà soát và chỉnh sửa các quy chế, quy trình nội bộ nhằm đảm bảo sự tương thích hoàn toàn với hành lang pháp lý hiện hành.',
+        ],
+      },
+      {
+        heading: '5.3.3. Phạm vi dịch vụ.',
+        paragraphs: [
+          'Phạm vi của nhánh tư vấn cập nhật pháp lý định kỳ tập trung vào các lĩnh vực pháp luật chuyên ngành ảnh hưởng trực tiếp đến sự tồn tại và phát triển của doanh nghiệp ví điện tử. Lĩnh vực rà soát bao gồm pháp luật về trung gian thanh toán (như Nghị định 52/2024/NĐ-CP và các Thông tư hướng dẫn), pháp luật về phòng chống rửa tiền và tài trợ khủng bố, an toàn an ninh mạng, giao dịch điện tử, chữ ký số, cũng như các quy định về bảo vệ dữ liệu cá nhân và người tiêu dùng.',
+          'Về thời gian và tần suất cung cấp, dịch vụ được duy trì liên tục trong suốt thời hạn hiệu lực của hợp đồng tư vấn thường xuyên. Báo cáo đánh giá và bản tin pháp lý sẽ được chuyển giao định kỳ theo kế hoạch đã thỏa thuận (hàng tháng hoặc hàng quý). Đáng chú ý, trong trường hợp cơ quan nhà nước ban hành các quy định khẩn cấp hoặc văn bản quy phạm pháp luật có tác động lớn, thay đổi đột ngột đến mô hình kinh doanh ví điện tử, chúng tôi sẽ phát hành Bản cảnh báo pháp lý đột xuất để doanh nghiệp kịp thời ứng phó.',
+          'Tuy nhiên, phạm vi dịch vụ có giới hạn rõ ràng nhằm bảo đảm hiệu quả công việc. Dịch vụ không bao gồm việc đại diện doanh nghiệp tham gia tố tụng, giải quyết tranh chấp tại Tòa án hay Trọng tài, không bao gồm thực hiện các thủ tục hành chính xin cấp mới hoặc sửa đổi Giấy phép trung gian thanh toán, và không thay thế công việc kiểm toán kỹ thuật, kiểm toán an toàn thông tin hạ tầng công nghệ của các đơn vị độc lập, trừ khi các nội dung này được hai bên thỏa thuận bổ sung bằng hợp đồng dịch vụ riêng biệt.',
+        ],
+      },
+      {
+        heading: '5.3.4. Mục đích dịch vụ.',
+        paragraphs: [
+          'Dịch vụ tư vấn cập nhật pháp lý định kỳ mang lại giá trị cốt lõi trong việc giúp doanh nghiệp triệt tiêu nguy cơ vi phạm pháp luật do thiếu hụt thông tin hoặc hiểu sai quy định chuyên ngành. Nhờ việc phát hiện sớm các điểm không tương thích, doanh nghiệp chủ động loại bỏ rủi ro bị xử phạt hành chính, bị tạm đình chỉ dịch vụ hoặc nghiêm trọng hơn là bị thu hồi Giấy phép hoạt động cung ứng dịch vụ trung gian thanh toán.',
+          'Bên cạnh đó, dịch vụ giúp doanh nghiệp tối ưu hóa chi phí tuân thủ và tiết kiệm thời gian vận hành. Việc nắm bắt trước các xu hướng thay đổi chính sách từ giai đoạn dự thảo giúp Ban Điều hành có đủ thời gian chuẩn bị về hạ tầng kỹ thuật, tài chính và nhân sự, tránh tình trạng bị động hay phải tạm ngừng cung ứng dịch vụ để nâng cấp hệ thống khi văn bản pháp luật chính thức có hiệu lực.',
+          'Cuối cùng, việc duy trì một cơ chế cập nhật pháp lý thường xuyên và bài bản góp phần củng cố năng lực cho đội ngũ pháp chế nội bộ vốn thường mỏng về nhân sự chuyên sâu trong lĩnh vực Fintech. Đồng thời, hình ảnh một doanh nghiệp luôn tuân thủ chuẩn mực và cập nhật kịp thời quy định pháp luật sẽ nâng cao uy tín, tạo niềm tin vững chắc đối với Ngân hàng Nhà nước, các ngân hàng hợp tác liên kết và đông đảo người sử dụng dịch vụ ví điện tử.',
+        ],
+      },
+    ],
+  },
+  'ho-so-xu-ly-su-co': {
+    sourceHeading: 'CHƯƠNG 6. TƯ VẤN XỬ LÝ CÁC VẤN ĐỀ PHÁT SINH.',
+    sections: [
+      {
+        heading: '6.1. Giới thiệu dịch vụ.',
+        paragraphs: [
+          'Trong quá trình vận hành, doanh nghiệp không chỉ cần luật sư khi đã có tranh chấp, bị thanh tra, bị đối tác chậm thanh toán hoặc phát sinh khiếu nại lao động. Đây là dịch vụ đồng hành cùng công ty trong suốt quá trình xây dựng, hoàn thiện và sử dụng các biểu mẫu, văn bản pháp lý để xử lý các sự cố phát sinh của ví điện tử (e-wallet). Doanh nghiệp có thể có một đầu mối pháp lý đồng hành định kỳ, hiểu mô hình hoạt động, nắm hồ sơ, theo sát giao dịch và hỗ trợ ban lãnh đạo kiểm soát rủi ro trong quá trình kinh doanh.',
+        ],
+      },
+      {
+        heading: '6.2. Nội dung dịch vụ.',
+        paragraphs: [
+          'Thứ nhất, nhóm Hồ sơ Xử lý Lừa đảo, Tội phạm Tài chính & Rửa tiền.',
+          '- Văn bản Thông báo Tạm dừng/Đơn phương Tạm khóa Dịch vụ: Dùng để căn cứ đúng Nghị định 52/2024/NĐ-CP và Điều khoản dịch vụ nhằm tiến hành dừng hoặc khóa tạm thời dịch vụ của khách hàng khi cần thiết.',
+          '-  Công văn Yêu cầu Cung cấp Thông tin/Giải trình KYC: Dùng để gửi tới khách hàng có các giao dịch bất thường nhằm phục vụ cho công tác phòng, chống rửa tiền.',
+          '- Hồ sơ Chuyển giao Thông tin & Báo cáo Tội phạm: Dùng làm văn bản báo cáo các nghi vấn hành vi vi phạm pháp luật để gửi cho Cục An ninh mạng và phòng chống tội phạm sử dụng công nghệ cao (A05/C05) hoặc gửi Công an cấp Tỉnh/Thành phố.',
+          '- Hồ sơ Xử lý Lệnh Phong tỏa Khẩn cấp từ Cơ quan Điều tra: Dùng để thực hiện quy trình tiếp nhận, xác minh tính hợp pháp của Lệnh phong tỏa nhận được từ Công an hoặc Tòa án, đồng thời làm văn bản phản hồi kết quả thực hiện.',
+          '- Thứ hai, nhóm Hồ sơ Xử lý Sự cố Kỹ thuật & Tranh chấp Tài chính.',
+          '- Văn bản Thỏa thuận Miễn trừ Trách nhiệm & Bồi thường: Sử dụng khi xảy ra sự cố sập hệ thống ảnh hưởng đến hàng loạt người dùng, giúp khoanh vùng nghĩa vụ bồi thường và chấm dứt tranh chấp.',
+          '- Hồ sơ Truy thu & Tra soát Tài chính: Bộ văn bản gửi Ngân hàng liên kết, Napas hoặc Merchant để hoàn trả tiền do lỗi hạch toán trùng hoặc chuyển tiền nhầm.',
+          '- Thỏa thuận Bảo mật Thông tin & Đền bù Khủng hoảng: Sử dụng trong các trường hợp thương lượng đền bù riêng lẻ với người dùng cá nhân để tránh lộ thông tin ra truyền thông.',
+          'Thứ ba, nhóm Hồ sơ Bảo vệ Dữ liệu Cá nhân & An ninh mạng.',
+          '- Hồ sơ Thông báo Sự cố Rò rỉ Dữ liệu: Văn bản thông báo khẩn cấp trong vòng 72 giờ gửi Cục An ninh mạng (Bộ Công an) khi phát hiện hệ thống bị Hack hoặc rò rỉ dữ liệu người dùng.',
+          '- Mẫu Phản hồi Yêu cầu của Chủ thể Dữ liệu: Văn bản xử lý các quyền của người dùng như quyền truy cập, quyền xóa dữ liệu, quyền rút lại sự đồng ý hoặc quyền khiếu nại.',
+          '- Hồ sơ Đánh giá Tác động Xử lý Dữ liệu Cá nhân: Bộ hồ sơ hoàn chỉnh phục vụ việc nộp báo cáo tuân thủ bắt buộc cho Bộ Công an.',
+        ],
+      },
+      {
+        heading: '6.3. Phạm vi dịch vụ.',
+        paragraphs: [
+          'Phạm vi dịch vụ áp dụng đối với sự cố, khiếu nại, tranh chấp và yêu cầu khẩn cấp phát sinh trong quá trình vận hành ví điện tử; việc đại diện tố tụng, giám định kỹ thuật và làm việc ngoài phạm vi ủy quyền chỉ được thực hiện khi có thỏa thuận riêng.',
+        ],
+      },
+      {
+        heading: '6.4. Mục đích dịch vụ.',
+        paragraphs: [
+          'Dịch vụ giúp doanh nghiệp tránh rủi ro bị mất quyền chủ động pháp lý hoặc bị xử phạt do sử dụng sai văn bản, sai thẩm quyền khi xử lý các sự cố khẩn cấp. Việc ban hành văn bản tạm khóa, thông báo xử lý vi phạm hay báo cáo cơ quan chức năng không đúng chuẩn pháp lý có thể khiến doanh nghiệp bị người dùng khiếu kiện ngược hoặc bị cơ quan quản lý phạt hành chính; việc sở hữu bộ biểu mẫu chuẩn hóa giúp doanh nghiệp xử lý nhanh, đúng căn cứ pháp luật.',
+          'Giảm thời gian xử lý khủng hoảng nhờ doanh nghiệp đã có sẵn kho văn bản để sử dụng, chỉ cần điền thông tin và ban hành ngay khi sự cố xảy ra. Điều này đặc biệt có ý nghĩa trong các tình huống nhạy cảm như sự cố sập hệ thống diện rộng hoặc lộ dữ liệu trong vòng 72 giờ, giúp ngăn chặn việc thông tin lan truyền tiêu cực trên truyền thông và bảo vệ uy tín thương hiệu trước nhà đầu tư.',
+          'Kiểm soát chặt chẽ rủi ro liên quan đến tội phạm tài chính, rửa tiền và tuân thủ bảo mật dữ liệu - những yếu tố sống còn quyết định sự thành bại của một dự án fintech. Bộ biểu mẫu được thiết kế chuyên biệt giúp doanh nghiệp thực hiện đúng trình tự phối hợp với cơ quan công an (A05/C05) và tuân thủ nghiêm ngặt Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15 và Nghị định 356/2025/NĐ-CP, triệt tiêu nguy cơ bị đình chỉ hoạt động do vi phạm pháp luật an ninh mạng.',
+          'Hỗ trợ đội ngũ pháp chế/tuân thủ nội bộ của doanh nghiệp vốn thường có nguồn lực mỏng, giải quyết nhanh chóng khối lượng văn bản hành chính - pháp lý lớn phát sinh liên tục trong quá trình vận hành. Thay vì mất nhiều thời gian tự soạn thảo từng văn bản cho mỗi sự cố riêng lẻ, đội ngũ nội bộ có thể sử dụng ngay bộ Playbook chuẩn hóa, giúp tối ưu hóa hiệu suất làm việc và giảm tải áp lực cho bộ máy nhân sự.',
+          'Tạo niềm tin tuyệt đối với nhà đầu tư và các đối tác tài chính (ngân hàng liên kết, tổ chức trung gian), nhờ doanh nghiệp sở hữu một hệ thống quản trị rủi ro bằng văn bản bài bản, minh bạch và chuyên nghiệp. Sự chuẩn chỉ trong từng bộ hồ sơ xử lý sự cố chính là bảo chứng mạnh mẽ nhất cho năng lực vận hành an toàn, giúp nhà đầu tư yên tâm tuyệt đối khi rót vốn vào dự án.',
         ],
       },
     ],

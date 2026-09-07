@@ -20,7 +20,7 @@ export default async function ContractBuilderPage({
         <div className="hero-note">
           <ShieldCheck aria-hidden="true" />
           <span>
-            <strong>09</strong> mẫu theo đúng nhóm hợp đồng trong báo cáo
+            <strong>20</strong> mẫu theo đúng nhóm dịch vụ trong báo cáo
           </span>
         </div>
       </SectionHero>

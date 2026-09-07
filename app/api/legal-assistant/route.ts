@@ -167,7 +167,7 @@ const knowledge = `Nguồn và nguyên tắc đã chọn lọc:
 - Luật Dữ liệu 60/2024/QH15; Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15; Nghị định 356/2025/NĐ-CP.
 - Đăng ký doanh nghiệp không thay giấy phép trung gian thanh toán. Hợp đồng API không mặc nhiên cho bên tích hợp giữ tiền, lấy thông tin đăng nhập hoặc dùng dữ liệu ngoài mục đích giao dịch. Hợp đồng phải bám luồng tiền, dữ liệu, tài liệu kỹ thuật, SLA, đối soát, tra soát và sự cố.
 
-Nội dung chín dịch vụ hợp đồng trích từ báo cáo tổng hợp:
+Nội dung 20 dịch vụ pháp lý trích từ báo cáo tổng hợp:
 ${reportKnowledge}`;
 
 export async function POST(request: Request) {
