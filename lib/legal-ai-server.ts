@@ -5,7 +5,7 @@ export async function runLegalAI(
   fallback: string,
   maxOutputTokens = 1400,
 ): Promise<AIResult> {
-  const directKey = process.env.OPENAI_API_KEY;
+  const directKey = process.env.OPENAI_API_KEY || process.env.openaikey;
   const gatewayKey =
     process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN;
   const apiKey = directKey || gatewayKey;

@@ -213,7 +213,7 @@ export async function POST(request: Request) {
         { error: 'Đã vượt giới hạn tạm thời. Vui lòng thử lại sau.' },
         { status: 429 },
       );
-    const directKey = process.env.OPENAI_API_KEY;
+    const directKey = process.env.OPENAI_API_KEY || process.env.openaikey;
     const gatewayKey =
       process.env.AI_GATEWAY_API_KEY ||
       process.env.VERCEL_OIDC_TOKEN ||
@@ -255,11 +255,12 @@ ${selectedText ? `Đoạn đang xem:\n---\n${selectedText}\n---\n` : ''}Câu h�
     );
     if (!upstream.ok || !upstream.body) {
       if (!directKey) gatewayUnavailableUntil = Date.now() + 30 * 60 * 1000;
-      console.error(
-        'OpenAI error',
-        upstream.status,
-        (await upstream.text()).slice(0, 300),
-      );
+      const failure = await upstream.json().catch(() => null) as
+        { error?: { code?: unknown } } | null;
+      const errorCode = failure?.error?.code;
+      console.error('OpenAI error', upstream.status,
+        typeof errorCode === 'string' && /^[a-z_]+$/.test(errorCode)
+          ? errorCode : 'upstream_error');
       return streamText(fallbackAnswer);
     }
     return new Response(upstream.body, {
