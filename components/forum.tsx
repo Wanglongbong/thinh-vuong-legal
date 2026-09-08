@@ -365,8 +365,8 @@ function PostForm({
       const data = await requestForum({
         action: post ? 'edit_post' : 'create_post',
         target: post?.id,
-        title: form.get('title'),
-        category: form.get('category'),
+        title: String(form.get('body') || '').trim().replace(/\s+/g, ' ').slice(0, 160),
+        category: post?.category || 'Pháp luật khác',
         body: form.get('body'),
         nickname: form.get('nickname'),
       });
@@ -379,28 +379,6 @@ function PostForm({
   }
   return (
     <form className="forum-form" onSubmit={submit}>
-      <label>
-        Tiêu đề
-        <input
-          name="title"
-          minLength={5}
-          maxLength={160}
-          defaultValue={post?.title}
-          placeholder="Nêu ngắn gọn vấn đề bạn muốn trao đổi"
-          required
-        />
-      </label>
-      <label>
-        Chuyên mục
-        <select
-          name="category"
-          defaultValue={post?.category || forumCategories[0]}
-        >
-          {forumCategories.map((c) => (
-            <option key={c}>{c}</option>
-          ))}
-        </select>
-      </label>
       {!post && (
         <label>
           Tên hiển thị (không bắt buộc)
@@ -412,6 +390,7 @@ function PostForm({
           />
         </label>
       )}
+      {!post && <small>Bạn có thể dùng tên hoặc biệt danh. Để trống ô tên nếu muốn đăng ẩn danh.</small>}
       <label>
         Nội dung
         <textarea
