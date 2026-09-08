@@ -7,12 +7,12 @@ export function SiteFooter() {
       <div className="site-shell footer-grid">
         <div>
           <div className="footer-brand">
-            <span className="w-8 h-8 rounded border border-[#d4af37] bg-[#0c1724] grid place-items-center text-[#f7ebb8]">
-              <Scale className="w-4 h-4 text-[#d4af37]" />
+            <span className="w-8 h-8 rounded border border-[#c59b27] bg-gradient-to-br from-white to-[#FAF1D7] grid place-items-center text-[#8C6B18] shadow-sm">
+              <Scale className="w-4 h-4 text-[#8C6B18]" />
             </span>
-            <span className="text-white font-serif text-lg tracking-wider">THỊNH VƯỢNG LEGAL</span>
+            <span className="text-[#0A131E] font-serif text-lg tracking-wider font-semibold">THỊNH VƯỢNG LEGAL</span>
           </div>
-          <p className="mt-3 text-slate-400 text-sm leading-relaxed">
+          <p className="mt-3 text-[#4A5868] text-sm leading-relaxed">
             Hệ thống kiến trúc dịch vụ pháp lý và tài liệu mẫu cho doanh nghiệp
             cung ứng dịch vụ ví điện tử & trung gian thanh toán tại Việt Nam.
           </p>

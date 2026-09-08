@@ -57,13 +57,13 @@ export default function Home() {
       <section className="home-hero">
         <div className="hero-overlay" />
 
-        {/* TƯỢNG NỮ THẦN CÔNG LÝ PHÓNG TO XUYÊN SUỐT NỀN HERO (NÉT VIỀN VÀNG KIM) */}
+        {/* TƯỢNG NỮ THẦN CÔNG LÝ NỬA THÂN TRÊN PHÓNG TO CỰC ĐẠI (NÉT VIỀN VÀNG DỊU NHẸ) */}
         <div className="themis-grand-backdrop" aria-hidden="true">
           <Image
-            src="/themis-outline.png"
-            alt="Nữ thần Công lý Themis nét vẽ viền vàng kim hoàng gia"
-            width={720}
-            height={860}
+            src="/themis-half-body.png"
+            alt="Nữ thần Công lý Themis bán thân nét vẽ viền vàng kim dịu nhẹ"
+            width={960}
+            height={960}
             priority
             className="themis-grand-backdrop-img"
           />
@@ -555,9 +555,9 @@ export default function Home() {
       <section className="cta-section">
         <div className="site-shell cta-inner">
           <div>
-            <span className="eyebrow light">Khởi đầu vững chắc từ mô hình</span>
+            <span className="eyebrow">Khởi đầu vững chắc từ mô hình</span>
             <h2>Biến yêu cầu pháp luật thành lộ trình có thể thực hiện.</h2>
-            <p className="text-[#d7e2e8] text-sm mt-3 max-w-xl">
+            <p className="text-[#4A5868] text-sm mt-3 max-w-xl">
               Hệ thống tài liệu và công cụ của Thịnh Vượng Legal giúp rút ngắn thời
               gian chuẩn bị hồ sơ từ vài tháng xuống vài giờ.
             </p>
@@ -571,7 +571,7 @@ export default function Home() {
             >
               <MessageCircle className="w-4 h-4" /> Trao đổi trực tiếp qua Zalo
             </a>
-            <span className="text-xs text-[#f7ebb8]">
+            <span className="text-xs text-[#8C6B18] font-semibold">
               Dự án mô phỏng phục vụ nghiên cứu & học tập
             </span>
           </div>
