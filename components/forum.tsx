@@ -365,7 +365,7 @@ function PostForm({
       const data = await requestForum({
         action: post ? 'edit_post' : 'create_post',
         target: post?.id,
-        title: String(form.get('body') || '').trim().replace(/\s+/g, ' ').slice(0, 160),
+        title: (typeof form.get('body') === 'string' ? form.get('body') as string : '').trim().replace(/\s+/g, ' ').slice(0, 160),
         category: post?.category || 'Pháp luật khác',
         body: form.get('body'),
         nickname: form.get('nickname'),
