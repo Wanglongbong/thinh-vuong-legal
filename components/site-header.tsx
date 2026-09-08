@@ -4,6 +4,8 @@ import { Mail, Menu, MessageCircle, Scale } from 'lucide-react';
 const nav = [
   ['Dịch vụ', '/dich-vu'],
   ['Hợp đồng', '/hop-dong'],
+  ['Báo cáo sơ bộ', '/bao-cao-so-bo'],
+  ['Diễn đàn Luật', '/dien-dan'],
   ['Nền tảng AI', '/cong-cu'],
   ['Kiến thức', '/kien-thuc'],
   ['Đội ngũ', '/doi-ngu'],
@@ -43,6 +45,9 @@ export function SiteHeader() {
             ))}
           </nav>
           <div className="header-actions">
+            <Link className="gold-button hidden md:inline-flex text-xs h-10 px-4" href="/tao-hop-dong">
+              Tạo dự thảo
+            </Link>
             <a
               className="icon-link"
               href="mailto:vuanhquan160205@gmail.com"

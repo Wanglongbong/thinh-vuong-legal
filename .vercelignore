@@ -1,0 +1,9 @@
+.git
+node_modules
+.next
+work
+outputs
+**/~$*
+scripts
+supabase
+docs

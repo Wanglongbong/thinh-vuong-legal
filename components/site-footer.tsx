@@ -7,21 +7,25 @@ export function SiteFooter() {
       <div className="site-shell footer-grid">
         <div>
           <div className="footer-brand">
-            <Scale />
-            <span>THỊNH VƯỢNG LEGAL</span>
+            <span className="w-8 h-8 rounded border border-[#d4af37] bg-[#0c1724] grid place-items-center text-[#f7ebb8]">
+              <Scale className="w-4 h-4 text-[#d4af37]" />
+            </span>
+            <span className="text-white font-serif text-lg tracking-wider">THỊNH VƯỢNG LEGAL</span>
           </div>
-          <p>
-            Hệ thống dịch vụ pháp lý mô phỏng dành cho dự án thành lập và vận
-            hành doanh nghiệp cung ứng ví điện tử tại Việt Nam.
+          <p className="mt-3 text-slate-400 text-sm leading-relaxed">
+            Hệ thống kiến trúc dịch vụ pháp lý và tài liệu mẫu cho doanh nghiệp
+            cung ứng dịch vụ ví điện tử & trung gian thanh toán tại Việt Nam.
           </p>
           <span className="footer-disclaimer">
-            Dự án học tập · Không phải tổ chức hành nghề luật sư
+            Dự án nghiên cứu học thuật · Tuân thủ NĐ 52/2024 & TT 40/2024
           </span>
         </div>
         <div>
           <h2>Khám phá</h2>
           <Link href="/dich-vu">Sáu nhóm dịch vụ</Link>
           <Link href="/hop-dong">Thư viện hợp đồng</Link>
+          <Link href="/bao-cao-so-bo">Báo cáo sơ bộ</Link>
+          <Link href="/dien-dan">Diễn đàn Luật</Link>
           <Link href="/cong-cu">Nền tảng pháp lý AI</Link>
           <Link href="/tao-hop-dong">Tạo dự thảo hợp đồng</Link>
           <Link href="/kien-thuc">Cơ sở pháp lý</Link>
