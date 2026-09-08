@@ -2,7 +2,7 @@
 begin;
 create table public.forum_posts (
   id uuid primary key default gen_random_uuid(),
-  author_id uuid not null references auth.users(id),
+  author_id uuid not null,
   nickname text not null default 'Ẩn danh' check (char_length(nickname) between 1 and 50),
   title text not null check (char_length(title) between 5 and 160),
   body text not null check (char_length(body) between 5 and 10000),
@@ -16,7 +16,7 @@ create index forum_posts_recent on public.forum_posts (status, created_at desc, 
 create table public.forum_comments (
   id uuid primary key default gen_random_uuid(),
   post_id uuid not null references public.forum_posts(id) on delete cascade,
-  author_id uuid not null references auth.users(id),
+  author_id uuid not null,
   nickname text not null default 'Ẩn danh' check (char_length(nickname) between 1 and 50),
   body text not null check (char_length(body) between 5 and 2000),
   status text not null default 'published' check (status in ('published','hidden','deleted')),
@@ -26,7 +26,7 @@ create table public.forum_comments (
 create index forum_comments_thread on public.forum_comments (post_id, created_at, id);
 create table public.forum_flags (
   id uuid primary key default gen_random_uuid(),
-  author_id uuid not null references auth.users(id),
+  author_id uuid not null,
   post_id uuid references public.forum_posts(id),
   comment_id uuid references public.forum_comments(id),
   reason text not null check (char_length(reason) between 5 and 500),

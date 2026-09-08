@@ -6,10 +6,8 @@ Mã diễn đàn đã có trong dự án. Khi chưa cấu hình Supabase, trang 
 
 1. Tạo dự án Supabase thuộc tài khoản của chủ website. Không nâng cấp gói trả phí để thực hiện các bước này.
 2. Trong SQL Editor, chạy toàn bộ `supabase/migrations/202609080001_forum.sql` một lần.
-3. Trong Authentication → Providers, bật Anonymous Sign-Ins. Khách vẫn không phải nhập tài khoản. Supabase tạo định danh ẩn danh để xác định quyền sửa/gỡ bài; đây không phải ẩn danh tuyệt đối với nhà cung cấp hạ tầng.
-4. Trong Vercel → Settings → Environment Variables, thêm các biến theo `.env.example`: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, `FORUM_RATE_LIMIT_SALT` (chuỗi ngẫu nhiên dài tối thiểu 32 ký tự, giữ ổn định). Chỉ hai biến đầu là thông tin công khai. Không đưa khóa service-role hoặc salt vào GitHub, mã phía trình duyệt hay hội thoại.
-5. Tạo người dùng quản trị chính thức trong Supabase Auth bằng email của chủ website; chủ tài khoản tự đặt mật khẩu. Sao chép UUID người dùng vào `FORUM_ADMIN_USER_ID` trên Vercel. Không chỉ dựa vào email hoặc thông tin do trình duyệt tự khai để cấp quyền.
-6. Triển khai lại Vercel. Mở `/dien-dan/quan-tri` để đăng nhập quản trị.
+3. Trong Vercel → Settings → Environment Variables, thêm các biến theo `.env.example`: `FORUM_DATABASE_URL`, `FORUM_SESSION_SECRET`, `FORUM_RATE_LIMIT_SALT`. Cả ba đều là bí mật máy chủ; không đưa vào GitHub, mã phía trình duyệt hay hội thoại.
+4. Triển khai lại Vercel. Khách không phải đăng nhập. Website tạo một mã phiên ngẫu nhiên, ký bằng HMAC và lưu trong cookie HttpOnly để xác định quyền sửa/gỡ nội dung trên cùng trình duyệt.
 
 ## Kiểm chứng trước khi mở đăng bài
 
@@ -27,13 +25,12 @@ Mã diễn đàn đã có trong dự án. Khi chưa cấu hình Supabase, trang 
 - API công khai không trả UUID tác giả, thông tin phiên hoặc dấu vết IP. IP được băm HMAC tại máy chủ; chỉ lưu dấu băm để chống spam, tự dọn sự kiện quá 24 giờ khi có lần ghi mới.
 - Dùng `x-vercel-forwarded-for` do Vercel cung cấp. Nếu chuyển hạ tầng, phải thay cách xác định IP đáng tin cậy trước khi mở diễn đàn.
 - Gỡ bài là ẩn mềm, chưa xóa bản ghi trong cơ sở dữ liệu; chủ hệ thống cần quy trình tiếp nhận yêu cầu xóa dữ liệu. Không đưa dữ liệu cá nhân nhạy cảm lên diễn đàn.
-- Phiên ẩn danh lưu bằng cookie HttpOnly. Xóa cookie/đổi trình duyệt sẽ mất quyền sở hữu trên phiên cũ; không hứa khôi phục khi chưa có xác minh.
+- Phiên ẩn danh lưu bằng cookie HttpOnly có chữ ký chống sửa giả. Xóa cookie/đổi trình duyệt sẽ mất quyền sở hữu trên phiên cũ; không hứa khôi phục khi chưa có xác minh.
 - Theo dõi báo cáo vi phạm hằng ngày vì bài xuất hiện ngay. Bản triển khai này không gửi email thông báo.
 
 ## Tài liệu chính thức
 
-- [Supabase Anonymous Sign-Ins](https://supabase.com/docs/guides/auth/auth-anonymous)
-- [Supabase server-side authentication](https://supabase.com/docs/guides/auth/server-side)
+- [Supabase Database connections](https://supabase.com/docs/guides/database/connecting-to-postgres)
 
 ## Hoàn tác an toàn
 
