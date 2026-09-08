@@ -7,8 +7,8 @@ export function SiteFooter() {
       <div className="site-shell footer-grid">
         <div>
           <div className="footer-brand">
-            <span className="w-8 h-8 rounded border border-[#c59b27] bg-gradient-to-br from-white to-[#FAF1D7] grid place-items-center text-[#8C6B18] shadow-sm">
-              <Scale className="w-4 h-4 text-[#8C6B18]" />
+            <span className="w-8 h-8 rounded border border-[#c59b27] bg-gradient-to-br from-[#FFFDF7] to-[#F5E2AC] grid place-items-center text-[#7D5D0D] shadow-[0_2px_10px_rgba(197,155,39,0.22)]">
+              <Scale className="w-4 h-4 text-[#7D5D0D]" />
             </span>
             <span className="text-[#0A131E] font-serif text-lg tracking-wider font-semibold">THỊNH VƯỢNG LEGAL</span>
           </div>
